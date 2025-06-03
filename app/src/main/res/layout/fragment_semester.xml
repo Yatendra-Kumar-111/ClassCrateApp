@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SemesterFragment"
+    android:background="#F5F0FA"
+    android:id="@+id/frameLayoutSemester">
+
+<!--    android:id="@+id/main"-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/title_semester"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SEMESTER"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_gravity="center"/>
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="4"
+            android:layout_marginTop="16dp"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:useDefaultMargins="true">
+
+            <LinearLayout
+                android:id="@+id/btnSem1"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:background="@drawable/bg_btn"
+                android:gravity="center"
+                android:padding="10dp"
+                android:elevation="4dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                >
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/icon_notes" />
+
+                <TextView
+                    android:id="@+id/tvSem1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Semester I"
+                    android:textColor="#000000"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnSem2"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                                android:background="@drawable/bg_btn"
+
+                android:gravity="center"
+                android:padding="10dp"
+                android:elevation="4dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                >
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/icon_notes" />
+
+                <TextView
+                    android:id="@+id/tvSem2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Semester II"
+                    android:textColor="#000000"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnSem3"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:background="@drawable/bg_btn"
+                android:gravity="center"
+                android:padding="10dp"
+                android:elevation="4dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                >
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/icon_notes" />
+
+                <TextView
+                    android:id="@+id/tvSem3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Semester III"
+                    android:textColor="#000000"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnSem4"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                                android:background="@drawable/bg_btn"
+
+                android:gravity="center"
+                android:padding="10dp"
+                android:elevation="4dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                >
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/icon_notes" />
+
+                <TextView
+                    android:id="@+id/tvSem4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Semester IV"
+                    android:textColor="#000000"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnSem5"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                                android:background="@drawable/bg_btn"
+
+                android:gravity="center"
+                android:padding="10dp"
+                android:elevation="4dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                >
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/icon_notes" />
+
+                <TextView
+                    android:id="@+id/tvSem5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Semester V"
+                    android:textColor="#000000"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+<!--
+
+            <LinearLayout
+                android:id="@+id/btnSem6"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:background="@drawable/bg_btn"
+                android:gravity="center"
+                android:padding="10dp"
+                android:elevation="4dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                >
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/icon_notes" />
+
+                <TextView
+                    android:id="@+id/tvSem6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Semester VI"
+                    android:textColor="#000000"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+-->
+
+        </GridLayout>
+    </LinearLayout>
+    </FrameLayout>
+

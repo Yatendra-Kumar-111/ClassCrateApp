@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.learningwithteam.classcrate1.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.learningwithteam.classcrate1.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.learningwithteam.classcrate1.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/pdfViewerFragment"
+        android:name="com.learningwithteam.classcrate1.PdfViewerFragment"
+        android:label="fragment_pdf_viewer"
+        tools:layout="@layout/fragment_pdf_viewer" />
+    <fragment
+        android:id="@+id/semesterFragment"
+        android:name="com.learningwithteam.classcrate1.SemesterFragment"
+        android:label="fragment_semester"
+        tools:layout="@layout/fragment_semester" />
+    <fragment
+        android:id="@+id/subjectsFragment"
+        android:name="com.learningwithteam.classcrate1.SubjectsFragment"
+        android:label="fragment_subjects"
+        tools:layout="@layout/fragment_subjects" />
+    <fragment
+        android:id="@+id/youtubeLinkFragment"
+        android:name="com.learningwithteam.classcrate1.YoutubeLinkFragment"
+        android:label="fragment_youtube_link"
+        tools:layout="@layout/fragment_youtube_link" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.learningwithteam.classcrate1.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <activity
+        android:id="@+id/navigationDrawerViewsActivity"
+        android:name="com.learningwithteam.classcrate1.NavigationDrawerViewsActivity"
+        android:label="app_bar_navigation_drawer_views"
+        tools:layout="@layout/app_bar_navigation_drawer_views" />
+</navigation>
