@@ -6,17 +6,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SemesterFragment"
-    android:background="#F5F0FA"
-    android:id="@+id/frameLayoutSemester">
-
-<!--    android:id="@+id/main"-->
+    android:id="@+id/frameLayoutSemester"
+    style="@style/Main_BG"
+    >
+<!--    android:background="#F5F0FA"-->
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="16dp"
+        style="@style/Main_BG">
 
         <TextView
             android:id="@+id/title_semester"
@@ -25,7 +26,7 @@
             android:text="SEMESTER"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="#000000"
+            style="@style/TEXT_BG"
             android:layout_gravity="center"/>
 
         <GridLayout
@@ -44,8 +45,9 @@
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_columnWeight="1"
+                android:focusable="true"
                 android:orientation="vertical"
-                android:background="@drawable/bg_btn"
+                style="@style/ButtonBG"
                 android:gravity="center"
                 android:padding="10dp"
                 android:elevation="4dp"
@@ -56,6 +58,7 @@
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
+                    android:contentDescription="@string/this_is_image"
                     android:src="@drawable/icon_notes" />
 
                 <TextView
@@ -63,7 +66,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Semester I"
-                    android:textColor="#000000"
+                    style="@style/TEXT_BG"
                     android:layout_marginTop="8dp" />
             </LinearLayout>
 
@@ -72,8 +75,9 @@
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_columnWeight="1"
+                android:focusable="true"
                 android:orientation="vertical"
-                                android:background="@drawable/bg_btn"
+                                style="@style/ButtonBG"
 
                 android:gravity="center"
                 android:padding="10dp"
@@ -85,6 +89,7 @@
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
+                    android:contentDescription="@string/this_is_image"
                     android:src="@drawable/icon_notes" />
 
                 <TextView
@@ -92,7 +97,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Semester II"
-                    android:textColor="#000000"
+                    style="@style/TEXT_BG"
                     android:layout_marginTop="8dp" />
             </LinearLayout>
 
@@ -101,8 +106,9 @@
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_columnWeight="1"
+                android:focusable="true"
                 android:orientation="vertical"
-                android:background="@drawable/bg_btn"
+                style="@style/ButtonBG"
                 android:gravity="center"
                 android:padding="10dp"
                 android:elevation="4dp"
@@ -113,6 +119,7 @@
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
+                    android:contentDescription="@string/this_is_image"
                     android:src="@drawable/icon_notes" />
 
                 <TextView
@@ -120,7 +127,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Semester III"
-                    android:textColor="#000000"
+                    style="@style/TEXT_BG"
                     android:layout_marginTop="8dp" />
             </LinearLayout>
 
@@ -129,8 +136,9 @@
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_columnWeight="1"
+                android:focusable="true"
                 android:orientation="vertical"
-                                android:background="@drawable/bg_btn"
+                                style="@style/ButtonBG"
 
                 android:gravity="center"
                 android:padding="10dp"
@@ -142,6 +150,7 @@
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
+                    android:contentDescription="@string/this_is_image"
                     android:src="@drawable/icon_notes" />
 
                 <TextView
@@ -149,19 +158,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Semester IV"
-                    android:textColor="#000000"
+                    style="@style/TEXT_BG"
                     android:layout_marginTop="8dp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/btnSem5"
+                style="@style/ButtonBG"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_columnWeight="1"
                 android:orientation="vertical"
-                                android:background="@drawable/bg_btn"
-
                 android:gravity="center"
                 android:padding="10dp"
                 android:elevation="4dp"
@@ -172,6 +180,7 @@
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
+                    android:contentDescription="@string/this_is_image"
                     android:src="@drawable/icon_notes" />
 
                 <TextView
@@ -179,7 +188,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Semester V"
-                    android:textColor="#000000"
+                    style="@style/TEXT_BG"
                     android:layout_marginTop="8dp" />
             </LinearLayout>
 <!--
@@ -190,7 +199,7 @@
                 android:layout_height="120dp"
                 android:layout_columnWeight="1"
                 android:orientation="vertical"
-                android:background="@drawable/bg_btn"
+                style="@style/ButtonBG"
                 android:gravity="center"
                 android:padding="10dp"
                 android:elevation="4dp"

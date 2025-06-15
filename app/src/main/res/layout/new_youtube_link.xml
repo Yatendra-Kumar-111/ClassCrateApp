@@ -46,6 +46,7 @@
         android:orientation="vertical"
         android:padding="16dp"
         android:layout_gravity="center"
+        android:gravity="center_horizontal"
         >
         
         <LinearLayout

@@ -236,13 +236,13 @@ public class YoutubeLinkFragment extends Fragment {
                    break;
 
                case "Mathematics- I" :
-                   ytUrl1 = "ha";
-                   ytUrl2 = "";
-                   ytUrl3 = "";
-                   setThumbnail("",
-                           "",
-                           "");
-                   setTitle_YTChannelName("Not Available", "Not Available", "Not Available");
+                   ytUrl1 = "https://youtube.com/playlist?list=PLU6SqdYcYsfKV1QmzQNtzMuIH7mq5qb62&si=IdvbC3KoxEuyRHxs";
+                   ytUrl2 = "https://youtube.com/playlist?list=PLHz3_2lRlEzpYEFBz1FHOmXYUgmgeQHfy&si=KKFmK4QYYeU1zpZw";
+                   ytUrl3 = "https://youtube.com/playlist?list=PLEHGYFbPuuMFwjyLadgPI3UFsWj4zMJdj&si=blCHbRHz2KAA2epr";
+                   setThumbnail("https://youtu.be/oWtoDPiZQJg?si=0I3-1srZ77TPmhZc",
+                           "https://youtu.be/du-nL4ObLOA?si=-GIkkzmIt79MztSM",
+                           "https://youtu.be/cDml8ML-us0?si=DzIBpusX8MFGAVWR");
+                   setTitle_YTChannelName("Dr.Gajendra Purohit", "The Science Fever", "Dream Maths");
                    break;
 
 

@@ -4,8 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SemsterYtFragment"
-    android:background="#F5F0FA"
+    style="@style/Main_BG"
     android:id="@+id/frameLayoutSemesterYT">
+<!--    android:background="#F5F0FA"-->
 
 
         <LinearLayout
@@ -21,7 +22,7 @@
                 android:text="SEMESTERS"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:textColor="#000000"
+                style="@style/TEXT_BG"
                 android:layout_gravity="center"/>
 
             <GridLayout
@@ -41,7 +42,7 @@
                     android:layout_height="120dp"
                     android:layout_columnWeight="1"
                     android:orientation="vertical"
-                    android:background="@drawable/bg_btn"
+                    style="@style/ButtonBG"
                     android:gravity="center"
                     android:padding="10dp"
                     android:elevation="4dp"
@@ -59,7 +60,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Semester I"
-                        android:textColor="#000000"
+                        style="@style/TEXT_BG"
                         android:layout_marginTop="8dp" />
                 </LinearLayout>
 
@@ -69,7 +70,7 @@
                     android:layout_height="120dp"
                     android:layout_columnWeight="1"
                     android:orientation="vertical"
-                    android:background="@drawable/bg_btn"
+                    style="@style/ButtonBG"
 
                     android:gravity="center"
                     android:padding="10dp"
@@ -88,7 +89,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Semester II"
-                        android:textColor="#000000"
+                        style="@style/TEXT_BG"
                         android:layout_marginTop="8dp" />
                 </LinearLayout>
 
@@ -98,7 +99,7 @@
                     android:layout_height="120dp"
                     android:layout_columnWeight="1"
                     android:orientation="vertical"
-                    android:background="@drawable/bg_btn"
+                    style="@style/ButtonBG"
                     android:gravity="center"
                     android:padding="10dp"
                     android:elevation="4dp"
@@ -116,7 +117,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Semester III"
-                        android:textColor="#000000"
+                        style="@style/TEXT_BG"
                         android:layout_marginTop="8dp" />
                 </LinearLayout>
 
@@ -126,7 +127,7 @@
                     android:layout_height="120dp"
                     android:layout_columnWeight="1"
                     android:orientation="vertical"
-                    android:background="@drawable/bg_btn"
+                    style="@style/ButtonBG"
 
                     android:gravity="center"
                     android:padding="10dp"
@@ -145,7 +146,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Semester IV"
-                        android:textColor="#000000"
+                        style="@style/TEXT_BG"
                         android:layout_marginTop="8dp" />
 
                 </LinearLayout>
@@ -156,7 +157,7 @@
                     android:layout_height="120dp"
                     android:layout_columnWeight="1"
                     android:orientation="vertical"
-                    android:background="@drawable/bg_btn"
+                    style="@style/ButtonBG"
 
                     android:gravity="center"
                     android:padding="10dp"
@@ -175,7 +176,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Semester V"
-                        android:textColor="#000000"
+                        style="@style/TEXT_BG"
                         android:layout_marginTop="8dp" />
                 </LinearLayout>
 

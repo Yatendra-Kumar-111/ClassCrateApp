@@ -1,5 +1,7 @@
 package com.learningwithteam.classcrate1;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,8 +12,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
+
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,16 +31,32 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
-
         new Handler().postDelayed(() -> {
-//                Intent intent = new Intent(SplashScreen.this, NavigationDrawerMainActivity.class);
             Intent intent = new Intent(MainActivity.this, NavigationDrawerViewsActivity.class);
             startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_top, R.anim.slide_out_bottom);
             finish();
-        }, 100);
+        }, 1000);
+      /*  new Handler().postDelayed(() -> {
+            FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+            Intent intent;
+
+            if (currentUser != null) {
+                // User already signed in
+                intent = new Intent(MainActivity.this, NavigationDrawerViewsActivity.class);
+            } else {
+                // User not signed in
+                intent = new Intent(MainActivity.this, LoginActivity.class);
+            }
+
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_top, R.anim.slide_out_bottom);
+            finish();
+        }, 1000);
+
+*/
 
 
-        }
+    }
 
     }

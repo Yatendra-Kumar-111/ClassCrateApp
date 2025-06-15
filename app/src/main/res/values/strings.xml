@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Class Crate1</string>
+    <string name="app_name">Class Crate</string>
     <string name="title_activity_navigation_drawer_views">NavigationDrawerViewsActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -8,11 +8,19 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
+    <string name="menu_home">Class Crate</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="videos">VIDEOS</string>
+    <string name="this_is_image">This is Image</string>
+
+<!--    <string name="default_web_client_id">1234567890-abc123def456.apps.googleusercontent.com</string>-->
+    <string name="default_web_client_id">YOUR-WEB-CLIENT-ID.apps.googleusercontent.com</string>
+    <string name="app_gmail">codebytgy@gmail.com</string>
+
+
 </resources>

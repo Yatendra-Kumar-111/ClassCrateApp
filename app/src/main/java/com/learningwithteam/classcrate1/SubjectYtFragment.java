@@ -95,10 +95,12 @@ public class SubjectYtFragment extends Fragment {
 //            Toast.makeText(getContext(), "*****" + subName, Toast.LENGTH_SHORT).show();
 
 
-            requireActivity().getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frameLayoutSubjectYT, new YoutubeLinkFragment())
-                    .addToBackStack(null)
-                    .commit();
+            openYoutubeFragment();
+
+//            requireActivity().getSupportFragmentManager().beginTransaction()
+//                    .replace(R.id.frameLayoutSubjectYT, new YoutubeLinkFragment())
+//                    .addToBackStack(null)
+//                    .commit();
         });
         btnSub2.setOnClickListener(v -> {
             subName = sub2.getText().toString();
@@ -107,11 +109,12 @@ public class SubjectYtFragment extends Fragment {
             inputDataViewModel.setData3(msg);
 //            Toast.makeText(getContext(), "*****" + subName, Toast.LENGTH_SHORT).show();
 
+            openYoutubeFragment();
 
-            requireActivity().getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frameLayoutSubjectYT, new YoutubeLinkFragment())
-                    .addToBackStack(null)
-                    .commit();
+//            requireActivity().getSupportFragmentManager().beginTransaction()
+//                    .replace(R.id.frameLayoutSubjectYT, new YoutubeLinkFragment())
+//                    .addToBackStack(null)
+//                    .commit();
         });
         btnSub3.setOnClickListener(v -> {
             subName = sub3.getText().toString();
@@ -121,11 +124,12 @@ public class SubjectYtFragment extends Fragment {
 
 //            Toast.makeText(getContext(), "*****" + subName, Toast.LENGTH_SHORT).show();
 
+            openYoutubeFragment();
 
-            requireActivity().getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frameLayoutSubjectYT, new YoutubeLinkFragment())
-                    .addToBackStack(null)
-                    .commit();
+//            requireActivity().getSupportFragmentManager().beginTransaction()
+//                    .replace(R.id.frameLayoutSubjectYT, new YoutubeLinkFragment())
+//                    .addToBackStack(null)
+//                    .commit();
         });
         btnSub4.setOnClickListener(v -> {
             subName = sub4.getText().toString();
@@ -136,11 +140,12 @@ public class SubjectYtFragment extends Fragment {
 //            Toast.makeText(getContext(), "*****" + subName, Toast.LENGTH_SHORT).show();
 
 
+            openYoutubeFragment();
 
-            requireActivity().getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frameLayoutSubjectYT, new YoutubeLinkFragment())
-                    .addToBackStack(null)
-                    .commit();
+//            requireActivity().getSupportFragmentManager().beginTransaction()
+//                    .replace(R.id.frameLayoutSubjectYT, new YoutubeLinkFragment())
+//                    .addToBackStack(null)
+//                    .commit();
         });
         btnSub5.setOnClickListener(v -> {
             subName = sub5.getText().toString();
@@ -150,15 +155,29 @@ public class SubjectYtFragment extends Fragment {
 
 //            Toast.makeText(getContext(), "*****" + subName, Toast.LENGTH_SHORT).show();
 
-
-            requireActivity().getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frameLayoutSubjectYT, new YoutubeLinkFragment())
-                    .addToBackStack(null)
-                    .commit();
+            openYoutubeFragment();
+//            requireActivity().getSupportFragmentManager().beginTransaction()
+//                    .replace(R.id.frameLayoutSubjectYT, new YoutubeLinkFragment())
+//                    .addToBackStack(null)
+//                    .commit();
         });
 
 
         return view;
+    }
+
+
+    private void openYoutubeFragment() {
+        requireActivity().getSupportFragmentManager().beginTransaction()
+                .setCustomAnimations(
+                        R.anim.slide_in_right,  // enter
+                        R.anim.slide_out_left,  // exit
+                        R.anim.slide_in_left,   // popEnter
+                        R.anim.slide_out_right  // popExit
+                )
+                .replace(R.id.frameLayoutSubjectYT, new YoutubeLinkFragment())
+                .addToBackStack(null)
+                .commit();
     }
 
 /*    @Override

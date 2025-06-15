@@ -1,5 +1,6 @@
 package com.learningwithteam.classcrate1.ui.home;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,49 +22,45 @@ import com.learningwithteam.classcrate1.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
 
+
     private FragmentHomeBinding binding;
-//    private TextView title;
+    //    private TextView title;
     private LinearLayout btnBook, btnNotes, btnSyllabus, btnModel, btnPaper,
-        btnPaperSolution, btnVideo, btnNotice;
-    String msgFromHomeToSem;
+            btnPaperSolution, btnVideo, btnNotice;
+    private static String msgFromHomeToSem, msg;
     private SharedViewModel inputDataViewModel;
+    private TextView title, tvBook, tvNotes, tvSyllabus, tvModel, tvPaper, tvVideo;
+
 
     public HomeFragment () {
 
     }
 
 
-
+    @SuppressLint("CommitTransaction")
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view  = inflater.inflate(R.layout.fragment_home, container, false);
-///*
-//        title = view.findViewById(R.id.title);
+
+
         btnBook = view.findViewById(R.id.btnBook);
         btnNotes = view.findViewById(R.id.btnNotes);
         btnSyllabus = view.findViewById(R.id.btnSyllabus);
         btnModel = view.findViewById(R.id.btnModel);
         btnPaper = view.findViewById(R.id.btnPapers);
         btnVideo = view.findViewById(R.id.btnVideo);
-//        btnPaperSolution = view.findViewById(R.id.btnPapersSolution);
-//        btnNotice = view.findViewById(R.id.btnNotice);
-//    */
 
-
-        TextView title = view.findViewById(R.id.title);
-        TextView tvBook = view.findViewById(R.id.tvBook);
-        TextView tvNotes = view.findViewById(R.id.tvNotes);
-        TextView tvSyllabus = view.findViewById(R.id.tvSyllabus);
-        TextView tvModel = view.findViewById(R.id.tvModel);
-        TextView tvPaper = view.findViewById(R.id.tvPaper);
-        TextView tvVideo = view.findViewById(R.id.tvVideo);
-//        TextView tvPaperSolution = view.findViewById(R.id.tvPaperSolution);
-//        TextView tvNotice = view.findViewById(R.id.tvNotice);
+         title = view.findViewById(R.id.title);
+         tvBook = view.findViewById(R.id.tvBook);
+         tvNotes = view.findViewById(R.id.tvNotes);
+         tvSyllabus = view.findViewById(R.id.tvSyllabus);
+         tvModel = view.findViewById(R.id.tvModel);
+         tvPaper = view.findViewById(R.id.tvPaper);
+         tvVideo = view.findViewById(R.id.tvVideo);
 
 
         inputDataViewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
 
 // 2:28am 03 june 25
-
 
 
         btnBook.setOnClickListener(v -> {
@@ -73,11 +70,12 @@ public class HomeFragment extends Fragment {
 
 //            NavHostFragment.findNavController(this).navigate(R.id.action_firstFragment_to_fourthFragment);
 
-
-            requireActivity().getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frameLayoutHome, new SemesterFragment())
-                    .addToBackStack(null)
-                    .commit();
+            openSubjectsFragment();
+//
+//            requireActivity().getSupportFragmentManager().beginTransaction()
+//                    .replace(R.id.frameLayoutHome, new SemesterFragment())
+//                    .addToBackStack(null)
+//                    .commit();
         });
 
         btnNotes.setOnClickListener(v -> {
@@ -85,35 +83,32 @@ public class HomeFragment extends Fragment {
             msgFromHomeToSem = tvNotes.getText().toString();
             inputDataViewModel.setData(msgFromHomeToSem);
 
-            requireActivity().getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frameLayoutHome, new SemesterFragment())
-                    .addToBackStack(null)
-                    .commit();
+            openSubjectsFragment();
+//            requireActivity().getSupportFragmentManager().beginTransaction()
+//                    .replace(R.id.frameLayoutHome, new SemesterFragment())
+//                    .addToBackStack(null)
+//                    .commit();
         });
         btnSyllabus.setOnClickListener(v -> {
 
             msgFromHomeToSem = tvSyllabus.getText().toString();
-//            inputDataViewModel.setData2(msgFromHomeToSem);
-//            inputDataViewModel.setData(msgFromHomeToSem);
+            inputDataViewModel.setData2(msgFromHomeToSem);
+            inputDataViewModel.setData(msgFromHomeToSem);
 
-
-            PdfViewerFragment secondFragment = new PdfViewerFragment();
-            Bundle bundle = new Bundle();
-            bundle.putString("key_name", msgFromHomeToSem);
-            secondFragment.setArguments(bundle); // Must be called BEFORE committing the transaction
 
             requireActivity().getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.frameLayoutHome, secondFragment)
+                    .setCustomAnimations(
+                            R.anim.slide_in_right,  // enter
+                            R.anim.slide_out_left,  // exit
+                            R.anim.slide_in_left,   // popEnter
+                            R.anim.slide_out_right  // popExit
+                    )
+//                    .replace(R.id.frameLayoutHome, secondFragment)
+                    .replace(R.id.frameLayoutHome, new PdfViewerFragment())
                     .addToBackStack(null)
                     .commit();
 
-
-
-          /*  requireActivity().getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frameLayoutHome, new PdfViewerFragment())
-                    .addToBackStack(null)
-                    .commit();*/
         });
 
         btnModel.setOnClickListener(v -> {
@@ -121,20 +116,24 @@ public class HomeFragment extends Fragment {
             msgFromHomeToSem = tvModel.getText().toString();
             inputDataViewModel.setData(msgFromHomeToSem);
 
-            requireActivity().getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frameLayoutHome, new SemesterFragment())
-                    .addToBackStack(null)
-                    .commit();
+            openSubjectsFragment();
+
+//            requireActivity().getSupportFragmentManager().beginTransaction()
+//                    .replace(R.id.frameLayoutHome, new SemesterFragment())
+//                    .addToBackStack(null)
+//                    .commit();
         });
 
         btnPaper.setOnClickListener(v -> {
             msgFromHomeToSem = tvPaper.getText().toString();
             inputDataViewModel.setData(msgFromHomeToSem);
 
-            requireActivity().getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frameLayoutHome, new SemesterFragment())
-                    .addToBackStack(null)
-                    .commit();
+            openSubjectsFragment();
+
+//            requireActivity().getSupportFragmentManager().beginTransaction()
+//                    .replace(R.id.frameLayoutHome, new SemesterFragment())
+//                    .addToBackStack(null)
+//                    .commit();
         });
 /*
         btnPaperSolution.setOnClickListener(v -> {
@@ -152,6 +151,12 @@ public class HomeFragment extends Fragment {
 //            inputDataViewModel.setData(msgFromHomeToSem);
 
             requireActivity().getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(
+                            R.anim.slide_in_right,  // enter
+                            R.anim.slide_out_left,  // exit
+                            R.anim.slide_in_left,   // popEnter
+                            R.anim.slide_out_right  // popExit
+                    )
                     .replace(R.id.frameLayoutHome, new SemsterYtFragment())
                     .addToBackStack(null)
                     .commit();
@@ -184,11 +189,28 @@ public class HomeFragment extends Fragment {
         return view;
     }
 
+
 /*    @Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
     }*/
+
+    private void openSubjectsFragment() {
+
+        requireActivity().getSupportFragmentManager().beginTransaction()
+                .setCustomAnimations(
+                        R.anim.slide_in_right,  // enter
+                        R.anim.slide_out_left,  // exit
+                        R.anim.slide_in_left,   // popEnter
+                        R.anim.slide_out_right  // popExit
+                )
+                .replace(R.id.frameLayoutHome, new SemesterFragment())
+                .addToBackStack(null)
+                .commit();
+    }
+
+
 
     @Override
     public void onDestroyView() {

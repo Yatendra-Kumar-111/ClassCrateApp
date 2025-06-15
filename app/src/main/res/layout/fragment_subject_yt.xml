@@ -6,233 +6,268 @@
     android:layout_height="match_parent"
     tools:context=".SubjectYtFragment"
     android:id="@+id/frameLayoutSubjectYT"
-    android:background="#EFEAFF">
+    style="@style/Main_BG"
+    >
+<!--    android:background="#EFEAFF"-->
 
-    <!--        Main Linear Layout -->
-    <LinearLayout
+<!--    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >-->
+
+
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp"
-        android:layout_gravity="center">
 
+        >
 
-        <TextView
-            android:id="@+id/title_subject"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="30dp"
-            android:text="SUBJECTS"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-
-
-        <LinearLayout
-            android:id="@+id/btnSub1"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/bg_btn"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true"
-            android:elevation="5dp"
+            android:id="@+id/relativeLayYt"
+            android:layout_marginTop="20dp"
             >
 
 
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:contentDescription="@string/app_name"
-                    android:layout_marginStart="10dp"
-                    android:src="@drawable/icon_book_shell" />
+    <!--        Main Linear Layout -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="-20dp"
+                android:layout_marginEnd="0dp"
                 android:orientation="vertical"
-                android:layout_gravity="center_vertical"
-                >
+                android:padding="16dp">
+
+
                 <TextView
-                    android:id="@+id/title_subject_name1"
+                    android:id="@+id/title_subject"
+                    style="@style/TEXT_BG"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:gravity="center"
-
-                    android:text="Subject I"
-                    android:textColor="#000"
-                    android:textSize="22sp" />
-            </LinearLayout>
-        </LinearLayout>
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="30dp"
+                    android:text="SUBJECTS"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
 
-
-        <LinearLayout
-            android:id="@+id/btnSub2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/bg_btn"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true"
-            android:elevation="5dp"
-            >
-
-
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginStart="10dp"
-                    android:contentDescription="@string/app_name"
-                    android:src="@drawable/icon_book_shell" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="center_vertical"
-                >
-                <TextView
-                    android:id="@+id/title_subject_name2"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/btnSub1"
+                    style="@style/ButtonBG"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
 
-                    android:text="Subject II"
-                    android:textColor="#000000"
-                    android:textSize="22sp" />
-            </LinearLayout>
-        </LinearLayout>
-
+                    android:elevation="5dp"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:orientation="horizontal">
 
 
-        <LinearLayout
-            android:id="@+id/btnSub3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/bg_btn"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true"
-            android:elevation="5dp"
-            >
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginStart="10dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/icon_book_shell" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/title_subject_name1"
+                            style="@style/TEXT_BG"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:gravity="center"
+                            android:text="Subject I"
+                            android:textSize="22sp" />
+                    </LinearLayout>
+                </LinearLayout>
 
 
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginStart="10dp"
-                    android:contentDescription="@string/app_name"
-                    android:src="@drawable/icon_book_shell" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="center_vertical"
-                >
-                <TextView
-                    android:id="@+id/title_subject_name3"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/btnSub2"
+                    style="@style/ButtonBG"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
 
-                    android:text="Subject III"
-                    android:textColor="#000000"
-                    android:textSize="22sp" />
-            </LinearLayout>
-        </LinearLayout>
-
+                    android:elevation="5dp"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:orientation="horizontal">
 
 
-        <LinearLayout
-            android:id="@+id/btnSub4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/bg_btn"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true"
-            android:elevation="5dp"
-            >
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginStart="10dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/icon_book_shell" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/title_subject_name2"
+                            style="@style/TEXT_BG"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+
+                            android:gravity="center"
+                            android:text="Subject II"
+                            android:textSize="22sp" />
+                    </LinearLayout>
+                </LinearLayout>
 
 
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginStart="10dp"
-                    android:contentDescription="@string/app_name"
-                    android:src="@drawable/icon_book_shell" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="center_vertical"
-                >
-                <TextView
-                    android:id="@+id/title_subject_name4"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/btnSub3"
+                    style="@style/ButtonBG"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
 
-                    android:text="Subject IV"
-                    android:textColor="#000000"
-                    android:textSize="22sp" />
-            </LinearLayout>
-        </LinearLayout>
-
+                    android:elevation="5dp"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:orientation="horizontal">
 
 
-        <LinearLayout
-            android:id="@+id/btnSub5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/bg_btn"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true"
-            android:elevation="5dp"
-            >
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginStart="10dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/icon_book_shell" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/title_subject_name3"
+                            style="@style/TEXT_BG"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+
+                            android:gravity="center"
+                            android:text="Subject III"
+                            android:textSize="22sp" />
+                    </LinearLayout>
+                </LinearLayout>
 
 
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginStart="10dp"
-                    android:contentDescription="@string/app_name"
-                    android:src="@drawable/icon_book_shell" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="center_vertical"
-                >
-                <TextView
-                    android:id="@+id/title_subject_name5"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/btnSub4"
+                    style="@style/ButtonBG"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:gravity="center"
-                    android:text="Subject V"
-                    android:textColor="#000000"
-                    android:textSize="22sp" />
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+
+                    android:elevation="5dp"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginStart="10dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/icon_book_shell" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/title_subject_name4"
+                            style="@style/TEXT_BG"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+
+                            android:gravity="center"
+                            android:text="Subject IV"
+                            android:textSize="22sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/btnSub5"
+                    style="@style/ButtonBG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+
+                    android:elevation="5dp"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginStart="10dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/icon_book_shell" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/title_subject_name5"
+                            style="@style/TEXT_BG"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:gravity="center"
+                            android:text="Subject V"
+                            android:textSize="22sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
             </LinearLayout>
-        </LinearLayout>
 
+        </RelativeLayout>
 
+        </ScrollView>
 
-    </LinearLayout>
+<!--    </RelativeLayout>-->
+
 </FrameLayout>

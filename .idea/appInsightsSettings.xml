@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.learningwithteam.classcrate1" />
+                  <option name="mobileSdkAppId" value="1:171646552084:android:28bfc8087151e30f40bf01" />
+                  <option name="projectId" value="class-crate" />
+                  <option name="projectNumber" value="171646552084" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

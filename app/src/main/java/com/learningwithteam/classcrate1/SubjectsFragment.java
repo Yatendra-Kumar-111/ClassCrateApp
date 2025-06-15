@@ -22,8 +22,10 @@ public class SubjectsFragment extends Fragment {
     }
 
     private SharedViewModel inputDataViewModel;
-    private String subName , msg;
-    LinearLayout btnSub1, btnSub2,btnSub3, btnSub4, btnSub5;
+    private static String subName , msg;
+    private LinearLayout btnSub1, btnSub2,btnSub3, btnSub4, btnSub5;
+    private TextView textView,sub1, sub2, sub3, sub4, sub5;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,12 +43,12 @@ public class SubjectsFragment extends Fragment {
         btnSub5 = view.findViewById(R.id.btnSub5);
 
 
-        TextView textView = view.findViewById(R.id.title_subjects);
-        TextView sub1 = view.findViewById(R.id.title_subject_name1);
-        TextView sub2 = view.findViewById(R.id.title_subject_name2);
-        TextView sub3 = view.findViewById(R.id.title_subject_name3);
-        TextView sub4 = view.findViewById(R.id.title_subject_name4);
-        TextView sub5 = view.findViewById(R.id.title_subject_name5);
+         textView = view.findViewById(R.id.title_subjects);
+         sub1 = view.findViewById(R.id.title_subject_name1);
+         sub2 = view.findViewById(R.id.title_subject_name2);
+         sub3 = view.findViewById(R.id.title_subject_name3);
+         sub4 = view.findViewById(R.id.title_subject_name4);
+         sub5 = view.findViewById(R.id.title_subject_name5);
 
         inputDataViewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
 
@@ -109,16 +111,16 @@ public class SubjectsFragment extends Fragment {
 //            Toast.makeText(getContext(), "*****" + msg, Toast.LENGTH_SHORT).show();
             inputDataViewModel.setData3(msg);
 
-
+            openSubjectsFragment();
 //            ArrayList <String> arrayList2 = new ArrayList<>();
 //            arrayList2.add(msg);     // from Home -> Sem -> Sub -> Pdf       &        index is 1
 //            arrayList2.add(subName);   //
 //            inputDataViewModel.setArrayList(arrayList2);
 
-            requireActivity().getSupportFragmentManager().beginTransaction()
-                .replace(R.id.frameLayoutSubject, new PdfViewerFragment())
-                .addToBackStack(null)
-                .commit();
+//            requireActivity().getSupportFragmentManager().beginTransaction()
+//                .replace(R.id.frameLayoutSubject, new PdfViewerFragment())
+//                .addToBackStack(null)
+//                .commit();
         });
         btnSub2.setOnClickListener(v -> {
             subName = sub2.getText().toString();
@@ -127,7 +129,7 @@ public class SubjectsFragment extends Fragment {
 //            Toast.makeText(getContext(), "*****" + msg, Toast.LENGTH_SHORT).show();
             inputDataViewModel.setData3(msg);
 
-
+            openSubjectsFragment();
 
 //            ArrayList <String> arrayList2 = new ArrayList<>();
 //            arrayList2.add(msg);
@@ -135,10 +137,10 @@ public class SubjectsFragment extends Fragment {
 //            inputDataViewModel.setArrayList(arrayList2);
 
 
-            requireActivity().getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frameLayoutSubject, new PdfViewerFragment())
-                    .addToBackStack(null)
-                    .commit();
+//            requireActivity().getSupportFragmentManager().beginTransaction()
+//                    .replace(R.id.frameLayoutSubject, new PdfViewerFragment())
+//                    .addToBackStack(null)
+//                    .commit();
         });
         btnSub3.setOnClickListener(v -> {
             subName = sub3.getText().toString();
@@ -146,7 +148,7 @@ public class SubjectsFragment extends Fragment {
 
 //            Toast.makeText(getContext(), "*****" + msg, Toast.LENGTH_SHORT).show();
             inputDataViewModel.setData3(msg);
-
+            openSubjectsFragment();
 
 //            ArrayList <String> arrayList2 = new ArrayList<>();
 //            arrayList2.add(msg);
@@ -154,10 +156,10 @@ public class SubjectsFragment extends Fragment {
 //            inputDataViewModel.setArrayList(arrayList2);
 
 
-            requireActivity().getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frameLayoutSubject, new PdfViewerFragment())
-                    .addToBackStack(null)
-                    .commit();
+//            requireActivity().getSupportFragmentManager().beginTransaction()
+//                    .replace(R.id.frameLayoutSubject, new PdfViewerFragment())
+//                    .addToBackStack(null)
+//                    .commit();
         });
         btnSub4.setOnClickListener(v -> {
             subName = sub4.getText().toString();
@@ -166,17 +168,17 @@ public class SubjectsFragment extends Fragment {
 //            Toast.makeText(getContext(), "*****" + msg, Toast.LENGTH_SHORT).show();
             inputDataViewModel.setData3(msg);
 
-
+            openSubjectsFragment();
 //            ArrayList <String> arrayList2 = new ArrayList<>();
 //            arrayList2.add(msg);
 //            arrayList2.add(subName);
 //            inputDataViewModel.setArrayList(arrayList2);
 
 
-            requireActivity().getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frameLayoutSubject, new PdfViewerFragment())
-                    .addToBackStack(null)
-                    .commit();
+//            requireActivity().getSupportFragmentManager().beginTransaction()
+//                    .replace(R.id.frameLayoutSubject, new PdfViewerFragment())
+//                    .addToBackStack(null)
+//                    .commit();
         });
         btnSub5.setOnClickListener(v -> {
             subName = sub5.getText().toString();
@@ -192,15 +194,30 @@ public class SubjectsFragment extends Fragment {
 //            arrayList2.add(subName);
 //            inputDataViewModel.setArrayList(arrayList2);
 
-
-            requireActivity().getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frameLayoutSubject, new PdfViewerFragment())
-                    .addToBackStack(null)
-                    .commit();
+            openSubjectsFragment();
+//            requireActivity().getSupportFragmentManager().beginTransaction()
+//                    .replace(R.id.frameLayoutSubject, new PdfViewerFragment())
+//                    .addToBackStack(null)
+//                    .commit();
         });
 
 
         return view;
+    }
+
+    private void openSubjectsFragment() {
+        requireActivity().getSupportFragmentManager().beginTransaction()
+                .setCustomAnimations(
+                        R.anim.slide_in_right,  // enter
+                        R.anim.slide_out_left,  // exit
+                        R.anim.slide_in_left,   // popEnter
+                        R.anim.slide_out_right  // popExit
+//                        R.anim.zoom_in,
+//                        R.anim.zoom_out
+                )
+                .replace(R.id.frameLayoutSubject, new PdfViewerFragment())
+                .addToBackStack(null)
+                .commit();
     }
 
 /*
@@ -218,10 +235,10 @@ public class SubjectsFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
 
-        // Restore the ActionBar
-        if (requireActivity() instanceof AppCompatActivity) {
-            ((AppCompatActivity) requireActivity()).getSupportActionBar().show();
-        }
+//        // Restore the ActionBar
+//        if (requireActivity() instanceof AppCompatActivity) {
+//            ((AppCompatActivity) requireActivity()).getSupportActionBar().show();
+//        }
     }
 
 

@@ -20,11 +20,13 @@ import java.util.ArrayList;
 public class SemesterFragment extends Fragment {
 
 //    private FragmentHomeBinding binding;
-    private LinearLayout btnSem1, btnSem2, btnSem3, btnSem4, btnSem5, btnSem6;
+    private LinearLayout btnSem1, btnSem2, btnSem3, btnSem4, btnSem5;
 //    private SharedViewModel outputViewModel;
     private SharedViewModel inputDataViewModel;
-    private static TextView title, tvSem1, tvSem2, tvSem3, tvSem4, tvSem5, tvSem6,textView;
-    private String msg;
+    private static String msg;
+
+// static is removed from textview
+    private TextView title, tvSem1, tvSem2, tvSem3, tvSem4, tvSem5, tvSem6,textView;
 
 
     public SemesterFragment() {
@@ -172,6 +174,14 @@ public class SemesterFragment extends Fragment {
 
     private void openSubjectsFragment() {
         requireActivity().getSupportFragmentManager().beginTransaction()
+                .setCustomAnimations(
+                        R.anim.slide_in_right,  // enter
+                        R.anim.slide_out_left,  // exit
+                        R.anim.slide_in_left,   // popEnter
+                        R.anim.slide_out_right  // popExit
+//                        R.anim.fade_in,
+//                        R.anim.fade_out
+                )
                 .replace(R.id.frameLayoutSemester, new SubjectsFragment())
                 .addToBackStack(null)
                 .commit();

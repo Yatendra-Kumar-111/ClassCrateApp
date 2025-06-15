@@ -1,6 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.ClassCrate1" parent="Theme.Material3.DayNight.NoActionBar">
+<!--    <style name="Base.Theme.ClassCrate1" parent="Theme.Material3.DayNight.NoActionBar">-->
+    <style name="Base.Theme.ClassCrate1" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="colorPrimary">@color/purple_500</item>
@@ -20,6 +21,29 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
 
     </style>
+
+
+    <!--    Light mode  -->
+    <style name="Main_BG">
+        <item name="android:background">#F5F0FA</item>
+    </style>
+    <style name="ButtonBG">
+        <item name="android:background">@drawable/bg_btn</item>
+    </style>
+    <style name="TEXT_BG">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@null</item>
+<!--        <item name="android:textStyle">bold</item>-->
+<!--        <item name="android:textAllCaps">true</item>-->
+    </style>
+
+    <style name="YT_Text_BG">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@drawable/bg_btn</item>
+    </style>
+
+
+
 
 
     <style name="Theme.ClassCrate1" parent="Base.Theme.ClassCrate1" />

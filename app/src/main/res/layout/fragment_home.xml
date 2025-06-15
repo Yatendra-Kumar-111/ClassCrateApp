@@ -7,9 +7,9 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment"
     android:id="@+id/frameLayoutHome"
-    android:background="#F5F0FA"
-
+    style="@style/Main_BG"
     >
+<!--    android:background="#F5F0FA"-->
 <!--    android:id="@+id/fragmentHome"-->
 
 
@@ -21,6 +21,7 @@
 
 
     <LinearLayout
+        style="@style/Main_BG"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -38,23 +39,23 @@
 
         <TextView
             android:id="@+id/title"
+            style="@style/TEXT_BG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="BCA CRATE"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="#000000"
             android:layout_gravity="center"/>
 
         <GridLayout
             android:id="@+id/gridLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:columnCount="2"
-            android:rowCount="4"
             android:layout_marginTop="16dp"
             android:alignmentMode="alignMargins"
+            android:columnCount="2"
             android:columnOrderPreserved="false"
+            android:rowCount="4"
             android:useDefaultMargins="true">
 
             <LinearLayout
@@ -64,14 +65,15 @@
                 android:layout_row="0"
                 android:layout_column="0"
                 android:layout_columnWeight="1"
-                android:background="@drawable/bg_btn"
+                style="@style/ButtonBG"
                 android:clickable="true"
                 android:elevation="4dp"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="10dp">
+                android:padding="10dp"
+                >
 
                 <ImageView
                     android:layout_width="70dp"
@@ -85,7 +87,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="BOOK"
-                    android:textColor="#000000" />
+            style="@style/TEXT_BG" />
             </LinearLayout>
 
             <LinearLayout
@@ -93,15 +95,14 @@
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_columnWeight="1"
-                android:orientation="vertical"
-                android:background="@drawable/bg_btn"
-                android:gravity="center"
-                android:padding="10dp"
+                style="@style/ButtonBG"
+                android:clickable="true"
                 android:elevation="4dp"
                 android:focusable="true"
-                android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                >
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
 
                 <ImageView
                     android:layout_width="70dp"
@@ -110,12 +111,12 @@
                     android:src="@drawable/icon_notes" />
 
                 <TextView
-                android:id="@+id/tvNotes"
+                    android:id="@+id/tvNotes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:text="NOTES"
-                    android:textColor="#000000"
-                    android:layout_marginTop="8dp" />
+            style="@style/TEXT_BG" />
             </LinearLayout>
 
             <LinearLayout
@@ -123,15 +124,14 @@
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_columnWeight="1"
-                android:orientation="vertical"
-                android:background="@drawable/bg_btn"
-                android:gravity="center"
-                android:padding="10dp"
+                style="@style/ButtonBG"
+                android:clickable="true"
                 android:elevation="4dp"
                 android:focusable="true"
-                android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                >
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
 
                 <ImageView
                     android:layout_width="70dp"
@@ -143,9 +143,9 @@
                     android:id="@+id/tvSyllabus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:text="Syllabus"
-                    android:textColor="#000000"
-                    android:layout_marginTop="8dp" />
+            style="@style/TEXT_BG" />
             </LinearLayout>
 
             <LinearLayout
@@ -153,15 +153,14 @@
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_columnWeight="1"
-                android:orientation="vertical"
-                android:background="@drawable/bg_btn"
-                android:gravity="center"
-                android:padding="10dp"
+                style="@style/ButtonBG"
+                android:clickable="true"
                 android:elevation="4dp"
                 android:focusable="true"
-                android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                >
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
 
                 <ImageView
                     android:layout_width="70dp"
@@ -173,9 +172,9 @@
                     android:id="@+id/tvModel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:text="MODELS"
-                    android:textColor="#000000"
-                    android:layout_marginTop="8dp" />
+            style="@style/TEXT_BG" />
 
             </LinearLayout>
 
@@ -184,15 +183,14 @@
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_columnWeight="1"
-                android:orientation="vertical"
-                android:background="@drawable/bg_btn"
-                android:gravity="center"
-                android:padding="10dp"
+                style="@style/ButtonBG"
+                android:clickable="true"
                 android:elevation="4dp"
                 android:focusable="true"
-                android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                >
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
 
                 <ImageView
                     android:layout_width="70dp"
@@ -204,11 +202,11 @@
                     android:id="@+id/tvPaper"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:text="EXAM PAPERS"
-                    android:textColor="#000000"
-                    android:layout_marginTop="8dp" />
+            style="@style/TEXT_BG" />
             </LinearLayout>
-<!--
+            <!--
 
             <LinearLayout
                 android:id="@+id/btnPapersSolution"
@@ -241,19 +239,18 @@
 -->
 
             <LinearLayout
+                style="@style/ButtonBG"
                 android:id="@+id/btnVideo"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
                 android:layout_columnWeight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:background="@drawable/bg_btn"
-                android:padding="10dp"
+                android:clickable="true"
                 android:elevation="4dp"
                 android:focusable="true"
-                android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                >
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
 
                 <ImageView
                     android:layout_width="70dp"
@@ -265,12 +262,12 @@
                     android:id="@+id/tvVideo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="VIDEOS"
-                    android:textColor="#000000"
-                    android:layout_marginTop="8dp" />
+                    android:layout_marginTop="8dp"
+                    android:text="@string/videos"
+                    style="@style/TEXT_BG" />
             </LinearLayout>
 
-<!--
+            <!--
 
             <LinearLayout
                 android:id="@+id/btnNotice"

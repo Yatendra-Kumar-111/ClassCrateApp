@@ -14,5 +14,19 @@
     <color name="light_blue_A200">#FF40C4FF</color>
     <color name="light_blue_A400">#FF00B0FF</color>
     <color name="black_overlay">#66000000</color>
+    <color name="pdfColor">#66000000</color>
+
+
+
+    <color name="pink">#D900FF</color>
+    <color name="lavender">#8692f7</color>
+    <color name="app_bg_light">#F5F0FA</color>
+    <color name="app_bg_dark">#121212</color>
+
+
+    <color name="grey">#aaa</color>
+    <color name="darkGrey">#ff424242</color>
+
+
 
 </resources>

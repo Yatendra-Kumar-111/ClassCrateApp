@@ -80,11 +80,12 @@ public class SemsterYtFragment extends Fragment {
 //            Toast.makeText(getContext(), "Sem- chal raha hai", Toast.LENGTH_SHORT).show();
 //            inputDataViewModel.setData(msg);
             inputDataViewModel.setArrayList(subjectsForAllBtns(msgSendToMethod));
+            openSubjectsFragment();
 
-            requireActivity().getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frameLayoutSemesterYT, new SubjectYtFragment())
-                    .addToBackStack(null)
-                    .commit();
+//            requireActivity().getSupportFragmentManager().beginTransaction()
+//                    .replace(R.id.frameLayoutSemesterYT, new SubjectYtFragment())
+//                    .addToBackStack(null)
+//                    .commit();
 
         });
         btnSem2.setOnClickListener(v -> {
@@ -92,49 +93,67 @@ public class SemsterYtFragment extends Fragment {
 
 //            inputDataViewModel.setData(msg);
             inputDataViewModel.setArrayList(subjectsForAllBtns(msgSendToMethod));
+            openSubjectsFragment();
 
-            requireActivity().getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frameLayoutSemesterYT, new SubjectYtFragment())
-                    .addToBackStack(null)
-                    .commit();
+//            requireActivity().getSupportFragmentManager().beginTransaction()
+//                    .replace(R.id.frameLayoutSemesterYT, new SubjectYtFragment())
+//                    .addToBackStack(null)
+//                    .commit();
         });
         btnSem3.setOnClickListener(v -> {
             String msgSendToMethod = tvSem3.getText().toString();
 
 //            inputDataViewModel.setData(msg);
             inputDataViewModel.setArrayList(subjectsForAllBtns(msgSendToMethod));
+            openSubjectsFragment();
 
-            requireActivity().getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frameLayoutSemesterYT, new SubjectYtFragment())
-                    .addToBackStack(null)
-                    .commit();
+//            requireActivity().getSupportFragmentManager().beginTransaction()
+//                    .replace(R.id.frameLayoutSemesterYT, new SubjectYtFragment())
+//                    .addToBackStack(null)
+//                    .commit();
         });
         btnSem4.setOnClickListener(v -> {
             String msgSendToMethod = tvSem4.getText().toString();
 
 //            inputDataViewModel.setData(msg);
             inputDataViewModel.setArrayList(subjectsForAllBtns(msgSendToMethod));
+            openSubjectsFragment();
 
-            requireActivity().getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frameLayoutSemesterYT, new SubjectYtFragment())
-                    .addToBackStack(null)
-                    .commit();
+//            requireActivity().getSupportFragmentManager().beginTransaction()
+//                    .replace(R.id.frameLayoutSemesterYT, new SubjectYtFragment())
+//                    .addToBackStack(null)
+//                    .commit();
         });
         btnSem5.setOnClickListener(v -> {
             String msgSendToMethod = tvSem5.getText().toString();
 
 //            inputDataViewModel.setData(msg);
             inputDataViewModel.setArrayList(subjectsForAllBtns(msgSendToMethod));
-
-            requireActivity().getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frameLayoutSemesterYT, new SubjectYtFragment())
-                    .addToBackStack(null)
-                    .commit();
+            openSubjectsFragment();
+//            requireActivity().getSupportFragmentManager().beginTransaction()
+//                    .replace(R.id.frameLayoutSemesterYT, new SubjectYtFragment())
+//                    .addToBackStack(null)
+//                    .commit();
         });
 
 
 
         return view;
+    }
+
+
+
+    private void openSubjectsFragment() {
+        requireActivity().getSupportFragmentManager().beginTransaction()
+                .setCustomAnimations(
+                        R.anim.slide_in_right,  // enter
+                        R.anim.slide_out_left,  // exit
+                        R.anim.slide_in_left,   // popEnter
+                        R.anim.slide_out_right  // popExit
+                )
+                .replace(R.id.frameLayoutSemesterYT, new SubjectYtFragment())
+                .addToBackStack(null)
+                .commit();
     }
 
 
