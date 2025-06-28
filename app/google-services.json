@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "171646552084",
+    "project_id": "class-crate",
+    "storage_bucket": "class-crate.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:171646552084:android:28bfc8087151e30f40bf01",
+        "android_client_info": {
+          "package_name": "com.learningwithteam.classcrate1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpaIy90l7vUfawzt1l-w2OBTcbc4imkMg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
