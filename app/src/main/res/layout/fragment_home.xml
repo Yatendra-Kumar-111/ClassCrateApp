@@ -9,16 +9,6 @@
     android:id="@+id/frameLayoutHome"
     style="@style/Main_BG"
     >
-<!--    android:background="#F5F0FA"-->
-<!--    android:id="@+id/fragmentHome"-->
-
-
-
-<!--<FrameLayout-->
-<!--    android:layout_width="wrap_content"-->
-<!--    android:layout_height="wrap_content"-->
-<!--    android:id="@+id/frameLayoutHome">-->
-
 
     <LinearLayout
         style="@style/Main_BG"
@@ -27,16 +17,6 @@
         android:orientation="vertical"
         android:padding="16dp"
         tools:ignore="UselessParent">
-
-
-<!--        <ImageView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="100dp"-->
-<!--            android:src="@drawable/bg"-->
-<!--            android:contentDescription="@string/app_name"/>-->
-
-
-
         <TextView
             android:id="@+id/title"
             style="@style/TEXT_BG"
@@ -74,22 +54,19 @@
                 android:orientation="vertical"
                 android:padding="10dp"
                 >
-
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:contentDescription="@string/app_name"
                     android:src="@drawable/icon_book_shell" />
-
                 <TextView
                     android:id="@+id/tvBook"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="BOOK"
-            style="@style/TEXT_BG" />
+                    style="@style/TEXT_BG" />
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/btnNotes"
                 android:layout_width="0dp"
@@ -103,22 +80,19 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="10dp">
-
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:contentDescription="@string/app_name"
                     android:src="@drawable/icon_notes" />
-
                 <TextView
                     android:id="@+id/tvNotes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="NOTES"
-            style="@style/TEXT_BG" />
+                    style="@style/TEXT_BG" />
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/btnSyllabus"
                 android:layout_width="0dp"
@@ -132,22 +106,19 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="10dp">
-
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:contentDescription="@string/app_name"
                     android:src="@drawable/icon_syllabus" />
-
                 <TextView
                     android:id="@+id/tvSyllabus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="Syllabus"
-            style="@style/TEXT_BG" />
+                    style="@style/TEXT_BG" />
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/btnModel"
                 android:layout_width="0dp"
@@ -161,23 +132,19 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="10dp">
-
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:contentDescription="@string/app_name"
                     android:src="@drawable/icon_model" />
-
                 <TextView
                     android:id="@+id/tvModel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="MODELS"
-            style="@style/TEXT_BG" />
-
+                    style="@style/TEXT_BG" />
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/btnPapers"
                 android:layout_width="0dp"
@@ -191,53 +158,19 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="10dp">
-
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:contentDescription="@string/app_name"
                     android:src="@drawable/icon_test" />
-
                 <TextView
                     android:id="@+id/tvPaper"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="EXAM PAPERS"
-            style="@style/TEXT_BG" />
+                    style="@style/TEXT_BG" />
             </LinearLayout>
-            <!--
-
-            <LinearLayout
-                android:id="@+id/btnPapersSolution"
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_columnWeight="1"
-                android:orientation="vertical"
-                android:background="#EFEAFF"
-                android:gravity="center"
-                android:padding="10dp"
-                android:elevation="4dp"
-                android:focusable="true"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                >
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:contentDescription="@string/app_name"
-                    android:src="@drawable/icon_solution" />
-
-                <TextView
-                    android:id="@+id/tvPaperSolution"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="PAPERS SOLUTION"
-                    android:textColor="#000000"
-                    android:layout_marginTop="8dp" />
-            </LinearLayout>
--->
-
             <LinearLayout
                 style="@style/ButtonBG"
                 android:id="@+id/btnVideo"
@@ -251,13 +184,11 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="10dp">
-
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:contentDescription="@string/app_name"
                     android:src="@drawable/icon_video" />
-
                 <TextView
                     android:id="@+id/tvVideo"
                     android:layout_width="wrap_content"
@@ -267,42 +198,7 @@
                     style="@style/TEXT_BG" />
             </LinearLayout>
 
-            <!--
-
-            <LinearLayout
-                android:id="@+id/btnNotice"
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_columnWeight="1"
-                android:orientation="vertical"
-                android:background="#EFEAFF"
-                android:gravity="center"
-                android:padding="10dp"
-                android:elevation="4dp"
-                android:focusable="true"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                >
-
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:contentDescription="@string/app_name"
-                    android:src="@drawable/icon_notification" />
-
-                <TextView
-                    android:id="@+id/tvNotice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="NOTICE"
-                    android:textColor="#000000"
-                    android:layout_marginTop="8dp" />
-
-            </LinearLayout>
-
--->
-
         </GridLayout>
-    </LinearLayout>
 
+    </LinearLayout>
 </FrameLayout>

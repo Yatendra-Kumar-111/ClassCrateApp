@@ -9,31 +9,16 @@
     android:id="@+id/frameLayoutSubject"
     style="@style/Main_BG"
     >
-<!--    android:background="#EFEAFF"-->
-
-
-<!--    android:id="@+id/fragmentSubject"-->
-
-
-<!--    <FrameLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:id="@+id/frameLayoutSubject"-->
-
-<!--        >-->
-
 <ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-
         <!--        Main Linear Layout -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="16dp">
-
             <TextView
                 android:id="@+id/title_subjects"
                 android:layout_width="wrap_content"
@@ -44,16 +29,7 @@
                 style="@style/TEXT_BG"
                 android:textSize="20sp"
                 android:textStyle="bold" />
-<!--
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="10dp"
-                android:layout_margin="10dp">-->
-                <!--                android:background="#CDBFFF"-->
 
-                <!--     btnSub- button subject           -->
                 <LinearLayout
                     android:id="@+id/btnSub1"
                     android:layout_width="match_parent"
@@ -65,17 +41,13 @@
                     android:foreground="?android:attr/selectableItemBackground"
                     android:elevation="5dp"
                     android:gravity="center"
-                    android:orientation="horizontal"
-
-                    >
-
+                    android:orientation="horizontal">
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:layout_marginStart="10dp"
                         android:contentDescription="@string/app_name"
                         android:src="@drawable/icon_book_shell" />
-
                     <TextView
                         android:id="@+id/title_subject_name1"
                         style="@style/TEXT_BG"
@@ -83,21 +55,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_weight="2"
-                        android:text="Subject I"
+                        android:text="@string/subject_i"
                         android:textSize="22sp" />
                 </LinearLayout>
-<!--            </androidx.cardview.widget.CardView>-->
 
-<!--            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="10dp"
-
-                app:cardElevation="10dp"
-                android:layout_margin="10dp"
-                >-->
-
-                <!--     btnSub- button subject           -->
                 <LinearLayout
                     android:id="@+id/btnSub2"
                     android:layout_width="match_parent"
@@ -109,39 +70,24 @@
                     android:foreground="?android:attr/selectableItemBackground"
                     android:elevation="5dp"
                     android:gravity="center"
-                    android:orientation="horizontal"
-                    >
-
+                    android:orientation="horizontal">
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:layout_marginStart="10dp"
-                        
                         android:contentDescription="@string/app_name"
                         android:src="@drawable/icon_book_shell" />
-
                     <TextView
                         android:id="@+id/title_subject_name2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_weight="2"
-                        android:text="Subject II"
+                        android:text="@string/subject_ii"
                         style="@style/TEXT_BG"
                         android:textSize="22sp" />
                 </LinearLayout>
-<!--            </androidx.cardview.widget.CardView>-->
 
-
- <!--           <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="10dp"
-                android:layout_margin="10dp"
->-->
-
-                <!--     btnSub- button subject           -->
                 <LinearLayout
                     android:id="@+id/btnSub3"
                     android:layout_width="match_parent"
@@ -153,40 +99,24 @@
                     android:foreground="?android:attr/selectableItemBackground"
                     android:elevation="5dp"
                     android:gravity="center"
-                    android:orientation="horizontal"
-                    >
-
+                    android:orientation="horizontal">
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:layout_marginStart="10dp"
-                        
                         android:contentDescription="@string/app_name"
                         android:src="@drawable/icon_book_shell" />
-
                     <TextView
                         android:id="@+id/title_subject_name3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_weight="2"
-                        android:text="Subject III"
+                        android:text="@string/subject_iii"
                         style="@style/TEXT_BG"
                         android:textSize="22sp" />
                 </LinearLayout>
-<!--            </androidx.cardview.widget.CardView>-->
 
-
-<!--            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="10dp"
-
-                app:cardElevation="10dp"
-                android:layout_margin="10dp"
->-->
-
-                <!--     btnSub- button subject           -->
                 <LinearLayout
                     android:id="@+id/btnSub4"
                     android:layout_width="match_parent"
@@ -198,40 +128,24 @@
                     android:foreground="?android:attr/selectableItemBackground"
                     android:elevation="5dp"
                     android:gravity="center"
-                    android:orientation="horizontal"
-                    >
-
+                    android:orientation="horizontal">
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:layout_marginStart="10dp"
-                        
                         android:contentDescription="@string/app_name"
                         android:src="@drawable/icon_book_shell" />
-
                     <TextView
                         android:id="@+id/title_subject_name4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_weight="2"
-                        android:text="Subject IV"
+                        android:text="@string/subject_iv"
                         style="@style/TEXT_BG"
                         android:textSize="22sp" />
                 </LinearLayout>
-<!--            </androidx.cardview.widget.CardView>-->
 
-
-<!--            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="10dp"
-
-                app:cardElevation="10dp"
-                android:layout_margin="10dp"
->-->
-
-                <!--     btnSub- button subject           -->
                 <LinearLayout
                     android:id="@+id/btnSub5"
                     android:layout_width="match_parent"
@@ -243,75 +157,24 @@
                     android:foreground="?android:attr/selectableItemBackground"
                     android:elevation="5dp"
                     android:gravity="center"
-                    android:orientation="horizontal"
-                    >
-
+                    android:orientation="horizontal">
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:layout_marginStart="10dp"
-                        
                         android:contentDescription="@string/app_name"
                         android:src="@drawable/icon_book_shell" />
-
                     <TextView
                         android:id="@+id/title_subject_name5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_weight="2"
-                        android:text="Subject V"
+                        android:text="@string/subject_v"
                         style="@style/TEXT_BG"
                         android:textSize="22sp" />
                 </LinearLayout>
-<!--            </androidx.cardview.widget.CardView>-->
-
-
-            <!--               <androidx.cardview.widget.CardView
-                               android:layout_width="match_parent"
-                               android:layout_height="wrap_content"
-                               app:cardCornerRadius="10dp"
-                               app:cardBackgroundColor="#ff9"
-                               app:cardElevation="10dp"
-                               app:cardUseCompatPadding="true"
-                               >
-
-                           &lt;!&ndash;     btnSub- button subject           &ndash;&gt;
-                           <LinearLayout
-                               android:id="@+id/btnSub6"
-                               android:layout_width="match_parent"
-                               android:layout_height="wrap_content"
-                               android:orientation="horizontal"
-                                                           style="@style/ButtonBG"
-
-
-                               android:gravity="center"
-                               android:padding="5dp"
-                               android:clickable="true"
-                               android:foreground="?android:attr/selectableItemBackground"
-                               >
-
-                               <ImageView
-                                   android:layout_width="80dp"
-                                   android:layout_marginStart="10dp"
-                                   android:layout_height="80dp"
-                                   
-                                   android:src="@drawable/icon_book_shell" />
-
-                               <TextView
-                                   android:layout_width="wrap_content"
-                                   android:layout_height="wrap_content"
-                                   android:text="Subject VI"
-                                   android:textSize="22sp"
-                                   android:layout_marginStart="10dp"
-                                   android:layout_weight="2"
-                                   style="@style/TEXT_BG"
-                                   />
-                           </LinearLayout>
-                       </androidx.cardview.widget.CardView>-->
-
 
         </LinearLayout>
 </ScrollView>
-
 </FrameLayout>

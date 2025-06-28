@@ -2,30 +2,31 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_drawer_view"
-
     >
 
     <item
         android:id="@+id/action_about"
         android:orderInCategory="100"
-        android:title="About Us"
+        android:title="@string/about_us"
         android:icon="@drawable/ic_about_us"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/action_rate"
         android:orderInCategory="100"
-        android:title="Rating App"
+        android:title="@string/rate_app"
         app:showAsAction="never" />
+
     <item
         android:id="@+id/action_share"
         android:orderInCategory="100"
-        android:title="Share App"
+        android:title="@string/share_app"
         app:showAsAction="never" />
+
     <item
         android:id="@+id/action_exit"
         android:orderInCategory="100"
-        android:title="Exit App"
+        android:title="@string/exit"
         app:showAsAction="never" />
 
 </menu>

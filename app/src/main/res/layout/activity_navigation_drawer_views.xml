@@ -8,20 +8,11 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-<!--     edit code only framelayout-->
-<!--    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/frameLayoutForAll"
-        android:layout_marginTop="@dimen/nav_header_vertical_spacing"
-        />-->
-
     <include
         android:id="@+id/app_bar_navigation_drawer_views"
         layout="@layout/app_bar_navigation_drawer_views"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
     <!-- Navigation View -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
@@ -30,9 +21,8 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_navigation_drawer_views"
-        app:menu="@menu/nav_menu" />
-
-
-
+        style="@style/Theme.ClassCrate1.PopupOverlay"
+        app:menu="@menu/nav_menu"
+        />
 
 </androidx.drawerlayout.widget.DrawerLayout>

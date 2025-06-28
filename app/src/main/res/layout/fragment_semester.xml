@@ -7,10 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".SemesterFragment"
     android:id="@+id/frameLayoutSemester"
-    style="@style/Main_BG"
-    >
-<!--    android:background="#F5F0FA"-->
-
+    style="@style/Main_BG" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -52,20 +49,17 @@
                 android:padding="10dp"
                 android:elevation="4dp"
                 android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                >
-
+                android:foreground="?android:attr/selectableItemBackground">
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:contentDescription="@string/this_is_image"
                     android:src="@drawable/icon_notes" />
-
                 <TextView
                     android:id="@+id/tvSem1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Semester I"
+                    android:text="@string/semester_i"
                     style="@style/TEXT_BG"
                     android:layout_marginTop="8dp" />
             </LinearLayout>
@@ -77,26 +71,22 @@
                 android:layout_columnWeight="1"
                 android:focusable="true"
                 android:orientation="vertical"
-                                style="@style/ButtonBG"
-
+                style="@style/ButtonBG"
                 android:gravity="center"
                 android:padding="10dp"
                 android:elevation="4dp"
                 android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                >
-
+                android:foreground="?android:attr/selectableItemBackground">
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:contentDescription="@string/this_is_image"
                     android:src="@drawable/icon_notes" />
-
                 <TextView
                     android:id="@+id/tvSem2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Semester II"
+                    android:text="@string/semester_ii"
                     style="@style/TEXT_BG"
                     android:layout_marginTop="8dp" />
             </LinearLayout>
@@ -113,20 +103,17 @@
                 android:padding="10dp"
                 android:elevation="4dp"
                 android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                >
-
+                android:foreground="?android:attr/selectableItemBackground">
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:contentDescription="@string/this_is_image"
                     android:src="@drawable/icon_notes" />
-
                 <TextView
                     android:id="@+id/tvSem3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Semester III"
+                    android:text="@string/semester_iii"
                     style="@style/TEXT_BG"
                     android:layout_marginTop="8dp" />
             </LinearLayout>
@@ -138,29 +125,24 @@
                 android:layout_columnWeight="1"
                 android:focusable="true"
                 android:orientation="vertical"
-                                style="@style/ButtonBG"
-
+                style="@style/ButtonBG"
                 android:gravity="center"
                 android:padding="10dp"
                 android:elevation="4dp"
                 android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                >
-
+                android:foreground="?android:attr/selectableItemBackground">
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:contentDescription="@string/this_is_image"
                     android:src="@drawable/icon_notes" />
-
                 <TextView
                     android:id="@+id/tvSem4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Semester IV"
+                    android:text="@string/semester_iv"
                     style="@style/TEXT_BG"
                     android:layout_marginTop="8dp" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -174,55 +156,21 @@
                 android:padding="10dp"
                 android:elevation="4dp"
                 android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                >
-
+                android:foreground="?android:attr/selectableItemBackground">
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:contentDescription="@string/this_is_image"
                     android:src="@drawable/icon_notes" />
-
                 <TextView
                     android:id="@+id/tvSem5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Semester V"
+                    android:text="@string/semester_v"
                     style="@style/TEXT_BG"
                     android:layout_marginTop="8dp" />
             </LinearLayout>
-<!--
-
-            <LinearLayout
-                android:id="@+id/btnSem6"
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_columnWeight="1"
-                android:orientation="vertical"
-                style="@style/ButtonBG"
-                android:gravity="center"
-                android:padding="10dp"
-                android:elevation="4dp"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                >
-
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/icon_notes" />
-
-                <TextView
-                    android:id="@+id/tvSem6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Semester VI"
-                    android:textColor="#000000"
-                    android:layout_marginTop="8dp" />
-            </LinearLayout>
--->
-
         </GridLayout>
-    </LinearLayout>
-    </FrameLayout>
 
+    </LinearLayout>
+</FrameLayout>

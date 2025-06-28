@@ -5,22 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".YoutubeLinkFragment"
-    style="@style/Main_BG"
-    >
-<!--    android:background="#EFEAFF"-->
-
+    style="@style/Main_BG">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
->
-
+        android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/relativeLay"
-
-        >
+        android:id="@+id/relativeLay">
 
         <TextView
             android:id="@+id/title"
@@ -34,36 +27,9 @@
             android:layout_marginTop="20dp"
             android:text="YouTube Channel Links"
             android:textAlignment="center"
-
             android:textSize="20sp"
             android:textStyle="bold" />
 
-  <!--      <View
-            android:id="@+id/divider"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="?android:attr/listDivider"
-            android:layout_below="@+id/title"
-            android:layout_marginBottom="20dp"
-            />
--->
-
-
-    <!--        android:layout_marginBottom="50dp"-->
-
-<!--
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/title"
-
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginEnd="0dp">
--->
-
-<!--                android:layout_marginTop="25dp"-->
             <LinearLayout
                 android:id="@+id/mainLinearLayout"
                 android:layout_width="match_parent"
@@ -73,30 +39,12 @@
                 android:gravity="center_horizontal"
                 android:orientation="vertical"
                 android:padding="16dp">
-                <!--                android:layout_marginTop="10dp"-->
-
-
-                <!--                    android:id="@+id/btnLink1"-->
-                <!--                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    style="@style/ButtonBG"
-                    android:clickable="true"
-                    android:elevation="5dp"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:gravity="center_horizontal"
-                    android:longClickable="true"
-                    android:orientation="vertical">-->
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:orientation="vertical">
-
                     <LinearLayout
                         android:id="@+id/btnLink1"
                         style="@style/ButtonBG"
@@ -110,7 +58,6 @@
                         android:longClickable="true"
                         android:orientation="vertical"
                         android:padding="5dp">
-
                         <ImageView
                             android:id="@+id/thumbnail1"
                             android:layout_width="150dp"
@@ -119,10 +66,7 @@
                             android:scaleType="fitCenter"
                             android:scaleY="1.4"
                             android:src="@drawable/ic_youtube" />
-
                     </LinearLayout>
-
-
                     <TextView
                         android:id="@+id/titleYTChName1"
                         style="@style/YT_Text_BG"
@@ -133,18 +77,14 @@
                         android:gravity="center"
                         android:text="Yt link 1"
                         android:textSize="22sp" />
-
                 </LinearLayout>
-
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-
                     android:gravity="center_horizontal"
                     android:orientation="vertical">
-
                     <LinearLayout
                         android:id="@+id/btnLink2"
                         style="@style/ButtonBG"
@@ -158,7 +98,6 @@
                         android:longClickable="true"
                         android:orientation="vertical"
                         android:padding="5dp">
-
                         <ImageView
                             android:id="@+id/thumbnail2"
                             android:layout_width="150dp"
@@ -167,10 +106,7 @@
                             android:scaleType="fitCenter"
                             android:scaleY="1.4"
                             android:src="@drawable/ic_youtube" />
-
                     </LinearLayout>
-
-
                     <TextView
                         android:id="@+id/titleYTChName2"
                         style="@style/YT_Text_BG"
@@ -181,9 +117,7 @@
                         android:gravity="center"
                         android:text="Yt link 1"
                         android:textSize="22sp" />
-
                 </LinearLayout>
-
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -192,7 +126,6 @@
                     android:layout_marginBottom="20dp"
                     android:gravity="center_horizontal"
                     android:orientation="vertical">
-
                     <LinearLayout
                         android:id="@+id/btnLink3"
                         style="@style/ButtonBG"
@@ -206,7 +139,6 @@
                         android:longClickable="true"
                         android:orientation="vertical"
                         android:padding="5dp">
-
                         <ImageView
                             android:id="@+id/thumbnail3"
                             android:layout_width="150dp"
@@ -215,10 +147,7 @@
                             android:scaleType="fitCenter"
                             android:scaleY="1.4"
                             android:src="@drawable/ic_youtube" />
-
                     </LinearLayout>
-
-
                     <TextView
                         android:id="@+id/titleYTChName3"
                         style="@style/YT_Text_BG"
@@ -229,129 +158,9 @@
                         android:gravity="center"
                         android:text="Yt link 1"
                         android:textSize="22sp" />
-
                 </LinearLayout>
-
-
-                <!--
-
-                &lt;!&ndash;
-                <TextView
-                    android:id="@+id/titleYTChName2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="YT Channel 2 Links"
-                    android:paddingLeft="10dp"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="#000000"
-                    android:layout_gravity="center"/>&ndash;&gt;
-                <LinearLayout
-                    android:id="@+id/btnLink2"
-                    style="@style/ButtonBG"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
-                    android:clickable="true"
-                    android:elevation="5dp"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/thumbnail2"
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:layout_gravity="center_horizontal"
-                        android:contentDescription="@string/app_name"
-                        android:scaleType="fitCenter"
-                        android:scaleY="1.4"
-                        android:src="@drawable/ic_youtube" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/titleYTChName2"
-                            style="@style/TEXT_BG"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:gravity="center"
-                            android:paddingEnd="5dp"
-                            android:text="Yt link 2"
-                            android:textSize="22sp" />
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                &lt;!&ndash;
-                <TextView
-                    android:id="@+id/titleYTChName3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="YT Channel 3 Links"
-                    android:paddingLeft="10dp"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="#000000"
-                    android:layout_gravity="center"/>&ndash;&gt;
-                <LinearLayout
-                    android:id="@+id/btnLink3"
-                    style="@style/ButtonBG"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
-                    android:clickable="true"
-                    android:elevation="4dp"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:orientation="vertical"
-                    android:paddingTop="5dp"
-                    android:paddingBottom="5dp">
-
-                    <ImageView
-                        android:id="@+id/thumbnail3"
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:layout_gravity="center_horizontal"
-                        android:contentDescription="@string/app_name"
-                        android:scaleType="fitCenter"
-                        android:scaleY="1.4"
-                        android:src="@drawable/ic_youtube" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/titleYTChName3"
-                            style="@style/TEXT_BG"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:gravity="center"
-                            android:paddingEnd="5dp"
-                            android:text="Yt link 3"
-                            android:textSize="22sp" />
-                    </LinearLayout>
-
-                </LinearLayout>
--->
-
 
             </LinearLayout>
-    </RelativeLayout>
+        </RelativeLayout>
     </ScrollView>
-
-
-
-
-
 </FrameLayout>

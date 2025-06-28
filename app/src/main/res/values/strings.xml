@@ -22,5 +22,24 @@
     <string name="default_web_client_id">YOUR-WEB-CLIENT-ID.apps.googleusercontent.com</string>
     <string name="app_gmail">codebytgy@gmail.com</string>
 
+    <string name="about_members">About Members:</string>
+
+    <string name="semester_i">Semester I</string>
+    <string name="semester_ii">Semester II</string>
+    <string name="semester_iii">Semester III</string>
+    <string name="semester_iv">Semester IV</string>
+    <string name="semester_v">Semester V</string>
+
+    <string name="subject_v">Subject V</string>
+    <string name="subject_iv">Subject IV</string>
+    <string name="subject_iii">Subject III</string>
+    <string name="subject_ii">Subject II</string>
+    <string name="subject_i">Subject I</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="about_us">About Us</string>
+    <string name="rate_app">Rate App</string>
+    <string name="share_app">Share App</string>
+    <string name="exit">Exit</string>
+
 
 </resources>

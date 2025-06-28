@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view"
-    >
+    tools:showIn="navigation_view">
 
 <!--    <group android:checkableBehavior="single"  >-->
         <item
@@ -13,31 +12,26 @@
         <item
             android:id="@+id/nav_dark_mode"
             android:icon="@drawable/ic_dark_mode"
-            android:title="Dark Mode" />
-
-        <!-- <item
-            android:id="@+id/nav_dark_mode"
-            android:icon="@drawable/ic_dark_mode"
-            android:title="Dark Mode" />-->
+            android:title="@string/dark_mode" />
 
         <item
             android:id="@+id/nav_about"
             android:icon="@drawable/ic_about"
-            android:title="About" />
+            android:title="@string/about_us" />
 
         <item
             android:id="@+id/nav_rate"
             android:icon="@drawable/ic_rating"
-            android:title="Rate App" />
+            android:title="@string/rate_app" />
 
         <item
             android:id="@+id/nav_share"
             android:icon="@drawable/ic_share"
-            android:title="Share App" />
+            android:title="@string/share_app" />
 
         <item
             android:id="@+id/nav_exit"
             android:icon="@drawable/ic_exit"
-            android:title="Exit" />
+            android:title="@string/exit" />
 <!--    </group>-->
 </menu>

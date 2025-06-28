@@ -5,48 +5,16 @@
     android:layout_height="match_parent"
     tools:context=".PdfViewerFragment"
     android:id="@+id/fragmentPdfViewer"
-    android:background="#F5F0FA"
-
-    >
+    android:background="#F5F0FA" >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center"
-        >
-<!--
-    <TextView
-        android:id="@+id/title_pdfView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="PDF"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:paddingBottom="5dp"
-        />-->
-<!--        android:layout_marginBottom="30dp"-->
-
+        android:gravity="center" >
         <WebView
             android:id="@+id/webView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
-
-
-
-<!--
-    <com.github.barteksc.pdfviewer.PDFView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/pdfViewerArea"/>
--->
-
-
-
     </LinearLayout>
-
-
-
 </FrameLayout>

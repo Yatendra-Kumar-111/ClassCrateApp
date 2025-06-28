@@ -9,39 +9,33 @@
         android:layout_height="wrap_content"
         android:text="Rate this app"
         android:textAppearance="?android:attr/textAppearanceLarge" />
-
     <RatingBar
         android:id="@+id/ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:numStars="5"
         android:stepSize="1.0" />
-
     <EditText
         android:id="@+id/feedback"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Add your comment \n\n"
         android:inputType="textMultiLine" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="end">
-
         <Button
             android:id="@+id/cancelButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
             android:text="Cancel" />
-
         <Button
             android:id="@+id/submitButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Submit" />
     </LinearLayout>
-
 </LinearLayout>

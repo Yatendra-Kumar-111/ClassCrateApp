@@ -4,9 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SemsterYtFragment"
-    style="@style/Main_BG"
-    android:id="@+id/frameLayoutSemesterYT">
-<!--    android:background="#F5F0FA"-->
+    android:id="@+id/frameLayoutSemesterYT"
+    style="@style/Main_BG">
 
 
         <LinearLayout
@@ -47,19 +46,16 @@
                     android:padding="10dp"
                     android:elevation="4dp"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    >
-
+                    android:foreground="?android:attr/selectableItemBackground">
                     <ImageView
                         android:layout_width="70dp"
                         android:layout_height="70dp"
                         android:src="@drawable/icon_notes" />
-
                     <TextView
                         android:id="@+id/tvSem1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Semester I"
+                        android:text="@string/semester_i"
                         style="@style/TEXT_BG"
                         android:layout_marginTop="8dp" />
                 </LinearLayout>
@@ -71,28 +67,23 @@
                     android:layout_columnWeight="1"
                     android:orientation="vertical"
                     style="@style/ButtonBG"
-
                     android:gravity="center"
                     android:padding="10dp"
                     android:elevation="4dp"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    >
-
+                    android:foreground="?android:attr/selectableItemBackground">
                     <ImageView
                         android:layout_width="70dp"
                         android:layout_height="70dp"
                         android:src="@drawable/icon_notes" />
-
                     <TextView
                         android:id="@+id/tvSem2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Semester II"
+                        android:text="@string/semester_ii"
                         style="@style/TEXT_BG"
                         android:layout_marginTop="8dp" />
                 </LinearLayout>
-
                 <LinearLayout
                     android:id="@+id/btnSem3"
                     android:layout_width="0dp"
@@ -104,23 +95,19 @@
                     android:padding="10dp"
                     android:elevation="4dp"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    >
-
+                    android:foreground="?android:attr/selectableItemBackground">
                     <ImageView
                         android:layout_width="70dp"
                         android:layout_height="70dp"
                         android:src="@drawable/icon_notes" />
-
                     <TextView
                         android:id="@+id/tvSem3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Semester III"
+                        android:text="@string/semester_iii"
                         style="@style/TEXT_BG"
                         android:layout_marginTop="8dp" />
                 </LinearLayout>
-
                 <LinearLayout
                     android:id="@+id/btnSem4"
                     android:layout_width="0dp"
@@ -128,29 +115,23 @@
                     android:layout_columnWeight="1"
                     android:orientation="vertical"
                     style="@style/ButtonBG"
-
                     android:gravity="center"
                     android:padding="10dp"
                     android:elevation="4dp"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    >
-
+                    android:foreground="?android:attr/selectableItemBackground">
                     <ImageView
                         android:layout_width="70dp"
                         android:layout_height="70dp"
                         android:src="@drawable/icon_notes" />
-
                     <TextView
                         android:id="@+id/tvSem4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Semester IV"
+                        android:text="@string/semester_iv"
                         style="@style/TEXT_BG"
                         android:layout_marginTop="8dp" />
-
                 </LinearLayout>
-
                 <LinearLayout
                     android:id="@+id/btnSem5"
                     android:layout_width="0dp"
@@ -158,28 +139,24 @@
                     android:layout_columnWeight="1"
                     android:orientation="vertical"
                     style="@style/ButtonBG"
-
                     android:gravity="center"
                     android:padding="10dp"
                     android:elevation="4dp"
                     android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    >
-
+                    android:foreground="?android:attr/selectableItemBackground">
                     <ImageView
                         android:layout_width="70dp"
                         android:layout_height="70dp"
                         android:src="@drawable/icon_notes" />
-
                     <TextView
                         android:id="@+id/tvSem5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Semester V"
+                        android:text="@string/semester_v"
                         style="@style/TEXT_BG"
                         android:layout_marginTop="8dp" />
                 </LinearLayout>
 
             </GridLayout>
         </LinearLayout>
-    </FrameLayout>
+</FrameLayout>
