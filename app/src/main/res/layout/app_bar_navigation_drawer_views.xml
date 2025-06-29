@@ -5,12 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".NavigationDrawerViewsActivity">
-
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/Theme.ClassCrate1.AppBarOverlay">
-
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -19,9 +17,6 @@
             style="@style/Theme.ClassCrate1.PopupOverlay"
             app:popupTheme="@style/Theme.ClassCrate1.PopupOverlay"
             />
-
     </com.google.android.material.appbar.AppBarLayout>
-
     <include layout="@layout/content_navigation_drawer_views"/>
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

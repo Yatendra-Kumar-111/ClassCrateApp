@@ -24,5 +24,4 @@
         style="@style/Theme.ClassCrate1.PopupOverlay"
         app:menu="@menu/nav_menu"
         />
-
 </androidx.drawerlayout.widget.DrawerLayout>

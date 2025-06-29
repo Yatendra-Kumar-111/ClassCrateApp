@@ -40,6 +40,15 @@
     <string name="rate_app">Rate App</string>
     <string name="share_app">Share App</string>
     <string name="exit">Exit</string>
+    <string name="book">BOOK</string>
+    <string name="notes">NOTES</string>
+    <string name="syllabus">Syllabus</string>
+    <string name="models">MODELS</string>
+    <string name="exam_papers">EXAM PAPERS</string>
+    <string name="bca_crate">BCA CRATE</string>
+    <string name="yatendra_kumar">👉 Yatendra Kumar</string>
+    <string name="gaurav_kumar">👉 Gaurav Kumar</string>
+    <string name="developed_by">Developed By :</string>
 
 
 </resources>

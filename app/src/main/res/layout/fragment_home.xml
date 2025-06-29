@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment"
     android:id="@+id/frameLayoutHome"
-    style="@style/Main_BG"
-    >
+    style="@style/Main_BG">
 
     <LinearLayout
         style="@style/Main_BG"
@@ -22,7 +20,7 @@
             style="@style/TEXT_BG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="BCA CRATE"
+            android:text="@string/bca_crate"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_gravity="center"/>
@@ -64,7 +62,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="BOOK"
+                    android:text="@string/book"
                     style="@style/TEXT_BG" />
             </LinearLayout>
             <LinearLayout
@@ -90,7 +88,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="NOTES"
+                    android:text="@string/notes"
                     style="@style/TEXT_BG" />
             </LinearLayout>
             <LinearLayout
@@ -113,10 +111,11 @@
                     android:src="@drawable/icon_syllabus" />
                 <TextView
                     android:id="@+id/tvSyllabus"
+                    android:textAllCaps="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Syllabus"
+                    android:text="@string/syllabus"
                     style="@style/TEXT_BG" />
             </LinearLayout>
             <LinearLayout
@@ -142,7 +141,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="MODELS"
+                    android:text="@string/models"
                     style="@style/TEXT_BG" />
             </LinearLayout>
             <LinearLayout
@@ -168,7 +167,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="EXAM PAPERS"
+                    android:text="@string/exam_papers"
                     style="@style/TEXT_BG" />
             </LinearLayout>
             <LinearLayout
