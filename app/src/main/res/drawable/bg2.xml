@@ -4,26 +4,10 @@
     <gradient
         android:startColor="@color/ic_launcher_background"
         android:endColor="#000E3D"
-        android:angle="90"
-        />
- <!--   <solid
-        android:color="@color/ic_launcher_background"
-        />-->
-
-    <corners
-        android:radius="24dp"
-        />
+        android:angle="90" />
+    <corners        android:radius="24dp" />
     <stroke
         android:width="3dp"
         android:color="@color/app_bg_light"/>
-<!--    <corners
-        android:bottomLeftRadius="10dp"
-        android:topLeftRadius="10dp"
-        />-->
-<!--    <stroke
-        android:color="@color/purple_500"
-        android:width="5dp"/>-->
-
-
 
 </shape>

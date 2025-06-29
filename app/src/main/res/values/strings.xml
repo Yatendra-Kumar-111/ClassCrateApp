@@ -17,19 +17,15 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="videos">VIDEOS</string>
     <string name="this_is_image">This is Image</string>
-
 <!--    <string name="default_web_client_id">1234567890-abc123def456.apps.googleusercontent.com</string>-->
     <string name="default_web_client_id">YOUR-WEB-CLIENT-ID.apps.googleusercontent.com</string>
     <string name="app_gmail">codebytgy@gmail.com</string>
-
     <string name="about_members">About Members:</string>
-
     <string name="semester_i">Semester I</string>
     <string name="semester_ii">Semester II</string>
     <string name="semester_iii">Semester III</string>
     <string name="semester_iv">Semester IV</string>
     <string name="semester_v">Semester V</string>
-
     <string name="subject_v">Subject V</string>
     <string name="subject_iv">Subject IV</string>
     <string name="subject_iii">Subject III</string>
@@ -49,6 +45,4 @@
     <string name="yatendra_kumar">👉 Yatendra Kumar</string>
     <string name="gaurav_kumar">👉 Gaurav Kumar</string>
     <string name="developed_by">Developed By :</string>
-
-
 </resources>

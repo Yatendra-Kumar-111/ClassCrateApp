@@ -55,7 +55,6 @@ public class YoutubeLinkFragment extends Fragment {
         view.setOnTouchListener((v, event) -> true); // Consumes all touch events
 
 
-
         btnLink1 = view.findViewById(R.id.btnLink1);
         btnLink2 = view.findViewById(R.id.btnLink2);
         btnLink3 = view.findViewById(R.id.btnLink3);
@@ -65,14 +64,9 @@ public class YoutubeLinkFragment extends Fragment {
         title_YTChannelName3 = view.findViewById(R.id.titleYTChName3);
         title = view.findViewById(R.id.title);
 
-
         thumbnailImageView1 = view.findViewById(R.id.thumbnail1);
         thumbnailImageView2 = view.findViewById(R.id.thumbnail2);
         thumbnailImageView3 = view.findViewById(R.id.thumbnail3);
-
-
-
-
 
 
         inputDataViewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
@@ -97,10 +91,12 @@ public class YoutubeLinkFragment extends Fragment {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(ytUrl1));
             startActivity(intent);
         });
+
         btnLink2.setOnClickListener(v -> {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(ytUrl2));
             startActivity(intent);
         });
+
         btnLink3.setOnClickListener(v -> {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(ytUrl3));
             startActivity(intent);
@@ -112,6 +108,7 @@ public class YoutubeLinkFragment extends Fragment {
             @Override
             public boolean onLongClick(View v) {
                 String textToCopy = ytUrl1;
+
                 if (!textToCopy.isEmpty()) {
                     ClipData clip = ClipData.newPlainText("Copied Text", textToCopy);
                     clipboardManager.setPrimaryClip(clip);
@@ -123,8 +120,6 @@ public class YoutubeLinkFragment extends Fragment {
             }
         });
 
-
-
         return view;
     }
 
@@ -133,11 +128,13 @@ public class YoutubeLinkFragment extends Fragment {
         String pattern = "(?<=v=|be/|embed/)[^&#?]+";
         Pattern compiledPattern = Pattern.compile(pattern);
         Matcher matcher = compiledPattern.matcher(url);
+
         if (matcher.find()) {
             return matcher.group();
         }
         return null;
     }
+
     private void showThumbnail(String videoId, ImageView thumbnailImageView) {
         if (videoId != null) {
             String thumbnailUrl = "https://img.youtube.com/vi/" + videoId + "/0.jpg";
@@ -156,6 +153,7 @@ public class YoutubeLinkFragment extends Fragment {
         showThumbnail(videoId2, thumbnailImageView2);
         showThumbnail(videoId3, thumbnailImageView3);
     }
+
     private void setThumbnail(String ytUrl1, String ytUrl3) {
         videoId1 = extractYoutubeVideoId(ytUrl1);
         videoId3 = extractYoutubeVideoId(ytUrl3);
@@ -167,21 +165,18 @@ public class YoutubeLinkFragment extends Fragment {
         showThumbnail(videoId3, thumbnailImageView3);
     }
 
-
-
     private void openYouTubeLink(String url) {
         String ytUrl = url;
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(ytUrl));
         startActivity(intent);
     }
 
-
     private void setTitle_YTChannelName (String name1, String name2, String name3) {
         this.title_YTChannelName1.setText(name1.toUpperCase());
         this.title_YTChannelName2.setText(name2.toUpperCase());
         this.title_YTChannelName3.setText(name3.toUpperCase());
     }
-// playlist ka thumbnail show nahi ho sakta lekin single video ka ho sakta hai
+// Note:- playlist ka thumbnail show nahi ho sakta lekin single video ka ho sakta hai
 
     private void setYTData (String data) {
 
@@ -471,17 +466,9 @@ public class YoutubeLinkFragment extends Fragment {
 
                default:
                    Toast.makeText(getActivity(), "Error! In Finding Links ", Toast.LENGTH_SHORT).show();
-
-
            }
-
         }
-
     }
-
-
-
-
 
 }
 

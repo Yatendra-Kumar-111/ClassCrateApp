@@ -2,7 +2,6 @@ package com.learningwithteam.classcrate1;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -11,11 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
 
 public class SubjectsFragment extends Fragment {
-
 
     public SubjectsFragment () {
 
@@ -65,17 +61,9 @@ public class SubjectsFragment extends Fragment {
                     } else if(data.equalsIgnoreCase("exam papers")) {
                         msg = data;
                     }
-//                    else if(data.equalsIgnoreCase("papers solution")) {
-//                        msg = data;
-//                    }
                     else if(data.equalsIgnoreCase("videos")) {
                         msg = data;
                     }
-//                    else if(data.equalsIgnoreCase("notice")) {
-//                        msg = data;
-//                    }
-//                    Toast.makeText(getContext(), msg + "+++++++++", Toast.LENGTH_SHORT).show();
-//                Toast.makeText(getContext(), "Hiii, Msg aa gya home -> sem -> sub", Toast.LENGTH_SHORT).show();
                 } else {
                     textView.setText("List is empty");
                 }
@@ -84,8 +72,6 @@ public class SubjectsFragment extends Fragment {
 
             
         inputDataViewModel.getArrayList().observe(getViewLifecycleOwner(), list -> {
-//            Toast.makeText(getContext(), "in Subject Fragment", Toast.LENGTH_SHORT).show();
-//            ArrayList<String> arrayList = list;
             if (list != null && !list.isEmpty()) {
                 sub1.setText(list.get(0));
                 sub2.setText(list.get(1));
@@ -95,112 +81,50 @@ public class SubjectsFragment extends Fragment {
             } else {
                 textView.setText("List is empty");
             }
-
         });
-
-
-
-
-
 
 
         btnSub1.setOnClickListener(v -> {
 
             subName = sub1.getText().toString();
             inputDataViewModel.setData(subName);
-//            Toast.makeText(getContext(), "*****" + msg, Toast.LENGTH_SHORT).show();
             inputDataViewModel.setData3(msg);
 
             openSubjectsFragment();
-//            ArrayList <String> arrayList2 = new ArrayList<>();
-//            arrayList2.add(msg);     // from Home -> Sem -> Sub -> Pdf       &        index is 1
-//            arrayList2.add(subName);   //
-//            inputDataViewModel.setArrayList(arrayList2);
-
-//            requireActivity().getSupportFragmentManager().beginTransaction()
-//                .replace(R.id.frameLayoutSubject, new PdfViewerFragment())
-//                .addToBackStack(null)
-//                .commit();
         });
+
         btnSub2.setOnClickListener(v -> {
             subName = sub2.getText().toString();
             inputDataViewModel.setData(subName);
-//            Toast.makeText(getContext(),  msg, Toast.LENGTH_SHORT).show();
-//            Toast.makeText(getContext(), "*****" + msg, Toast.LENGTH_SHORT).show();
             inputDataViewModel.setData3(msg);
 
             openSubjectsFragment();
-
-//            ArrayList <String> arrayList2 = new ArrayList<>();
-//            arrayList2.add(msg);
-//            arrayList2.add(subName);
-//            inputDataViewModel.setArrayList(arrayList2);
-
-
-//            requireActivity().getSupportFragmentManager().beginTransaction()
-//                    .replace(R.id.frameLayoutSubject, new PdfViewerFragment())
-//                    .addToBackStack(null)
-//                    .commit();
         });
+
         btnSub3.setOnClickListener(v -> {
             subName = sub3.getText().toString();
             inputDataViewModel.setData(subName);
 
-//            Toast.makeText(getContext(), "*****" + msg, Toast.LENGTH_SHORT).show();
             inputDataViewModel.setData3(msg);
             openSubjectsFragment();
-
-//            ArrayList <String> arrayList2 = new ArrayList<>();
-//            arrayList2.add(msg);
-//            arrayList2.add(subName);
-//            inputDataViewModel.setArrayList(arrayList2);
-
-
-//            requireActivity().getSupportFragmentManager().beginTransaction()
-//                    .replace(R.id.frameLayoutSubject, new PdfViewerFragment())
-//                    .addToBackStack(null)
-//                    .commit();
         });
+
         btnSub4.setOnClickListener(v -> {
             subName = sub4.getText().toString();
             inputDataViewModel.setData(subName);
 
-//            Toast.makeText(getContext(), "*****" + msg, Toast.LENGTH_SHORT).show();
             inputDataViewModel.setData3(msg);
 
             openSubjectsFragment();
-//            ArrayList <String> arrayList2 = new ArrayList<>();
-//            arrayList2.add(msg);
-//            arrayList2.add(subName);
-//            inputDataViewModel.setArrayList(arrayList2);
-
-
-//            requireActivity().getSupportFragmentManager().beginTransaction()
-//                    .replace(R.id.frameLayoutSubject, new PdfViewerFragment())
-//                    .addToBackStack(null)
-//                    .commit();
         });
+
         btnSub5.setOnClickListener(v -> {
             subName = sub5.getText().toString();
             inputDataViewModel.setData(subName);
-
-//            Toast.makeText(getContext(), "*****" + msg, Toast.LENGTH_SHORT).show();
             inputDataViewModel.setData3(msg);
 
-
-
-//            ArrayList <String> arrayList2 = new ArrayList<>();
-//            arrayList2.add(msg);
-//            arrayList2.add(subName);
-//            inputDataViewModel.setArrayList(arrayList2);
-
             openSubjectsFragment();
-//            requireActivity().getSupportFragmentManager().beginTransaction()
-//                    .replace(R.id.frameLayoutSubject, new PdfViewerFragment())
-//                    .addToBackStack(null)
-//                    .commit();
         });
-
 
         return view;
     }
@@ -220,28 +144,9 @@ public class SubjectsFragment extends Fragment {
                 .commit();
     }
 
-/*
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-
-        // ViewModel se list clear karo
-//        SharedViewModel viewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
-        inputDataViewModel.clearList();
     }
-    */
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-
-//        // Restore the ActionBar
-//        if (requireActivity() instanceof AppCompatActivity) {
-//            ((AppCompatActivity) requireActivity()).getSupportActionBar().show();
-//        }
-    }
-
-
-
 
 }

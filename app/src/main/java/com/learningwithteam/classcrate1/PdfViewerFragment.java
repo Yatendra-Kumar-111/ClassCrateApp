@@ -37,14 +37,12 @@ public class PdfViewerFragment extends Fragment {
     private static String msg;
     private static String subjectName;
     WebView webView;
-//    private TextView title;
 
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_pdf_viewer, container, false);
-//        title = view.findViewById(R.id.title_pdfView);
 
         // Hide ActionBar and status bara
         if (requireActivity() instanceof AppCompatActivity) {
@@ -59,8 +57,6 @@ public class PdfViewerFragment extends Fragment {
         }
 
         webView = view.findViewById(R.id.webView);
-//        WebSettings settings = webView.getSettings();
-//        webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setAllowFileAccess(true);
         webView.getSettings().setDomStorageEnabled(true);
@@ -69,16 +65,6 @@ public class PdfViewerFragment extends Fragment {
         webView.getSettings().setUseWideViewPort(true);
         webView.getSettings().setBuiltInZoomControls(true);
         webView.getSettings().setDisplayZoomControls(true);
-//
-//        settings.setJavaScriptEnabled(true);
-//        settings.setAllowFileAccess(true);
-//        settings.setDomStorageEnabled(true);
-//
-//        settings.setLoadWithOverviewMode(true);
-//        settings.setUseWideViewPort(true);
-//        settings.setBuiltInZoomControls(true);
-//        settings.setDisplayZoomControls(true);
-
 
         webView.setHapticFeedbackEnabled(true); // for vibration feedback (optional)
 
@@ -89,44 +75,10 @@ public class PdfViewerFragment extends Fragment {
                 Log.d("WebView", consoleMessage.message());
                 return true;
             }
-//            public void onReceivedError(WebView view, int errorCode,
-//                                        String description, String failingUrl) {
-//                Log.e("WebViewError", "Error: " + description + " URL: " + failingUrl);
-//                Toast.makeText(getContext(), "WebView Error: " + description, Toast.LENGTH_SHORT).show();
-//            }
         });
-
-
-
 
         // Block clicks passing through
 //        view.setOnTouchListener((v, event) -> true); // Consumes all touch events
-
-
-
-/*
-
-        String message = "";
-        Bundle bundle = getArguments();
-        if (bundle != null) {
-            message = bundle.getString("key_name");
-
-//             Use 'message' as needed, e.g., show in a TextView
-            Log.d("SubjectFragment", "Received message: " + message);
-
-            if("Syllabus".equalsIgnoreCase(message)) {
-                webView.loadUrl("https://drive.google.com/file/d/1NkhWanzQT9ldio7nb5KlY_aN3LQIBfzd/view?usp=drive_link");
-                Toast.makeText(getContext(), "Work Properly!!!!!!!", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(getContext(), "Error! In load Syllabus Pdf", Toast.LENGTH_SHORT).show();
-            }
-        }
-
-*/
-
-
-
-
 
         inputDataViewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
 
@@ -143,7 +95,6 @@ public class PdfViewerFragment extends Fragment {
 
             if("Syllabus".equalsIgnoreCase(msg)) {
                 webView.loadUrl("https://drive.google.com/file/d/1NkhWanzQT9ldio7nb5KlY_aN3LQIBfzd/view?usp=drive_link");
-//                Toast.makeText(getContext(), "Work Properly!!!!!!!", Toast.LENGTH_SHORT).show();
             } else Toast.makeText(getContext(), "Syllabu pdf not runnig***********",
                     Toast.LENGTH_SHORT).show();
         });
@@ -152,7 +103,6 @@ public class PdfViewerFragment extends Fragment {
             
             try {
                 if (subName == null || subName.isEmpty()){
-//            if(subName.isEmpty() || subName==null) {
                     Toast.makeText(getContext(), "Error! Run App Again", Toast.LENGTH_SHORT).show();
                 }
             } catch (Exception e) {
@@ -167,11 +117,9 @@ public class PdfViewerFragment extends Fragment {
             
             
             if (subName == null || subName.isEmpty()){
-//            if(subName.isEmpty() || subName==null) {
                 Toast.makeText(getContext(), "Error! Run App Again", Toast.LENGTH_SHORT).show();
             } else {
                 subjectName = subName;
-//                title.setText(subjectName);
 
                 String notAvailablePdf = "https://drive.google.com/file/d/1HMbN4GHl5uRbOhchPWdcFFBpjZaNQiX-/view?usp=drive_link";
                 String pdfNull = "https://drive.google" +
@@ -183,11 +131,6 @@ public class PdfViewerFragment extends Fragment {
 //----------------------------------------------------------------------------------------------------------------------------
 //                                                        START LINK WORK
 //----------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
                 //      Start PDF open by links
                 // Sub -> FOC
                 if("Computer Fundamentals and MS-Office".equalsIgnoreCase(subjectName)) {
@@ -210,7 +153,6 @@ public class PdfViewerFragment extends Fragment {
                     if("book".equalsIgnoreCase(mainButtonName))
                         webView.loadUrl("https://drive.google.com/file/d/1UbRfKKKwzgqdZOt6_JjxCMQtYLgFnPl3/view?usp=drive_link");
                     else if ("notes".equalsIgnoreCase(mainButtonName))
-//                        webView.loadUrl("https://drive.google.com/file/d/1B4woa6HlDWrbcv2DbPNj3goikXPVNrG9/view?usp=drive_link");
                         webView.loadUrl("https://drive.google.com/file/d/1vJ7IhJrErsXYFJIPo3L5S_RfYh6-8mGS/view?usp=drive_link");
                     else if("models".equalsIgnoreCase(mainButtonName))
                         webView.loadUrl("https://drive.google.com/file/d/1q2qFhIiCZmmI7sptH-rVeXQPxTaA0SOU/view?usp=drive_link");
@@ -252,10 +194,8 @@ public class PdfViewerFragment extends Fragment {
                 else if ("Mathematics- I".equalsIgnoreCase(subjectName)) {
                     if("book".equalsIgnoreCase(mainButtonName))
                         webView.loadUrl("https://drive.google.com/file/d/14La1oER2AeGth8JnJiXL8Oytr2G5mko-/view?usp=drive_link");
-//                        webView.loadUrl("https://drive.google.com/file/d/1sue6RfikzJCuSUor8YJra9OPmi3yKrNI/view?usp=drive_link");
                     else if ("notes".equalsIgnoreCase(mainButtonName)) {
                         webView.loadUrl("https://drive.google.com/file/d/14YXdGWa6SE1hIxFt2gx1YuOELpISySy2/view?usp=drive_link");
-//                        Toast.makeText(getContext(), "Sorry! We have no notes for this subject", Toast.LENGTH_SHORT).show();
                     }
                     else if("models".equalsIgnoreCase(mainButtonName))
                         webView.loadUrl("https://drive.google.com/file/d/11UT3BEGJFIGrkhI04VXI2Adaw9S-PQkQ/view?usp=drive_link");
@@ -278,7 +218,6 @@ public class PdfViewerFragment extends Fragment {
                         webView.loadUrl("https://drive.google.com/file/d/1swEnAtri03LZ3YzSPUvMjamBG-7NZlju/view?usp=drive_link");
                     else if("exam papers".equalsIgnoreCase(mainButtonName))
                         webView.loadUrl("https://drive.google.com/file/d/1d-UcILH8exx4pUCZWU-3TuMyhCSqEhgZ/view?usp=drive_link");
-
                     else {
                         nullPdfCall();
                     }
@@ -293,12 +232,8 @@ public class PdfViewerFragment extends Fragment {
                         webView.loadUrl("https://drive.google.com/file/d/1bRcFxwNMkM7PQ0FKLLPrdgZlBAHixxY1/view?usp=drive_link");
                     else if("exam papers".equalsIgnoreCase(mainButtonName))
                         webView.loadUrl("https://drive.google.com/file/d/129iFL2bYar0PNDCMVuh3Dfc801vZAAMa/view?usp=drive_link");
-
                     else {
                         nullPdfCall();
-//                        webView.loadUrl(pdfNull);
-//                    Toast.makeText(getContext(), "Catch Error", Toast.LENGTH_SHORT).show();
-
                     }
                 }
                 // Sub -> Data Structure using ‘C’/’C++’
@@ -312,7 +247,6 @@ public class PdfViewerFragment extends Fragment {
                         webView.loadUrl("https://drive.google.com/file/d/1TFC6_u8wR62lSPt_ZZ9ldz-FiVkc8zwb/view?usp=drive_link");
                     else if("exam papers".equalsIgnoreCase(mainButtonName))
                         webView.loadUrl("https://drive.google.com/file/d/1jABndh0QaizLn7whWjU6hoz_9ZnuAehl/view?usp=drive_link");
-
                     else nullPdfCall();
                 }
                 // Sub -> Principles of Management
@@ -328,9 +262,6 @@ public class PdfViewerFragment extends Fragment {
 
                     else {
                         nullPdfCall();
-//                        webView.loadUrl(pdfNull);
-//                    Toast.makeText(getContext(), "Catch Error", Toast.LENGTH_SHORT).show();
-
                     }
                 }
                 // Sub -> Numerical Methods
@@ -343,9 +274,7 @@ public class PdfViewerFragment extends Fragment {
                         webView.loadUrl("https://drive.google.com/file/d/19M_SrbYMIOa5HAx_fPWTmgTFgBbb63gu/view?usp=drive_link");
                     else if("exam papers".equalsIgnoreCase(mainButtonName))
                         webView.loadUrl("https://drive.google.com/file/d/1yKdPDgCxhHpIPraUa9rEOXcmig9pu4UB/view?usp=drive_link");
-
                     else nullPdfCall();
-
                 }
 
                 // Sem 3
@@ -360,7 +289,6 @@ public class PdfViewerFragment extends Fragment {
                     else if("exam papers".equalsIgnoreCase(mainButtonName))
                         webView.loadUrl("https://drive.google.com/file/d/1-aiD6qcHjzjVKGfQhmw5d-K4w5T_DjOO/view?usp=drive_link");
                     else nullPdfCall();
-
                 }
                 // Sub -> E-Commerce and ERP
                 else if ("E-Commerce and ERP".equalsIgnoreCase(subjectName )) {
@@ -372,10 +300,8 @@ public class PdfViewerFragment extends Fragment {
                         webView.loadUrl("https://drive.google.com/file/d/18DUhcW9BKrpHUugDwDSJfAzAWl0IQvTT/view?usp=drive_link");
                     else if("exam papers".equalsIgnoreCase(mainButtonName))
                         webView.loadUrl("https://drive.google.com/file/d/1Bwjb1V3ilnHFnwdECB6NCyQ2Ru0P8G4t/view?usp=drive_link");
-
                     else {
                         nullPdfCall();
-//                        webView.loadUrl(pdfNull);
                     }
                 }
                 // Sub -> Computer Organization and Architecture
@@ -388,10 +314,8 @@ public class PdfViewerFragment extends Fragment {
                         webView.loadUrl("https://drive.google.com/file/d/1lklouFBBNIvSn-vuryjVt2xyG_PeNO5w/view?usp=drive_link");
                     else if("exam papers".equalsIgnoreCase(mainButtonName))
                         webView.loadUrl("https://drive.google.com/file/d/1fn7p-iGkyM0IIAggVE7adYWBESV8iL8g/view?usp=drive_link");
-
                     else {
                         nullPdfCall();
-//                        webView.loadUrl(pdfNull);
                     }
                 }
                 // Sub -> Operating System with the case study of UNIX & Windows
@@ -404,10 +328,8 @@ public class PdfViewerFragment extends Fragment {
                         webView.loadUrl("https://drive.google.com/file/d/10IF6AaFxjLOLnFSwq1KM7-xRRhMfCjcG/view?usp=drive_link");
                     else if("exam papers".equalsIgnoreCase(mainButtonName))
                         webView.loadUrl("https://drive.google.com/file/d/1nFk6KL0C4AZ8I2eJolV2GHSSk_iKxVwv/view?usp=drive_link");
-
                     else {
                         nullPdfCall();
-//                        webView.loadUrl(pdfNull);
                     }
                 }
                 // Sub -> Statistical Method and Application
@@ -422,7 +344,6 @@ public class PdfViewerFragment extends Fragment {
                         webView.loadUrl("https://drive.google.com/file/d/1qTZvxlXT7RsTqelINBj1UNf8vUW1JR16/view?usp=drive_link");
                     else {
                         nullPdfCall();
-//                        webView.loadUrl(pdfNull);
                     }
                 }
 
@@ -439,7 +360,6 @@ public class PdfViewerFragment extends Fragment {
                         webView.loadUrl("https://drive.google.com/file/d/1KLl09LsUg_F1ISHax5iLCIAyMg_97RRu/view?usp=drive_link");
                     else {
                         nullPdfCall();
-//                        webView.loadUrl(pdfNull);
                     }
                 }
                 // Sub -> Web Technology with PHP & MySQL
@@ -454,7 +374,6 @@ public class PdfViewerFragment extends Fragment {
                         webView.loadUrl("https://drive.google.com/file/d/1L2Rk1qznQQD6kGBNo124xV-MXpOMixkG/view?usp=drive_link");
                     else {
                         nullPdfCall();
-//                        webView.loadUrl(pdfNull);
                     }
                 }
                 // Sub -> Artificial Intelligence
@@ -469,7 +388,6 @@ public class PdfViewerFragment extends Fragment {
                         webView.loadUrl("https://drive.google.com/file/d/1RwFAE4fFxelYX9fD5M5KCgvM4m1fKI-Z/view?usp=drive_link");
                     else {
                         nullPdfCall();
-//                        webView.loadUrl(pdfNull);
                     }
                 }
                 // Sub -> Computer Network
@@ -484,7 +402,6 @@ public class PdfViewerFragment extends Fragment {
                         webView.loadUrl("https://drive.google.com/file/d/1Zas2byIeICn7xPMka6Y_oEr2HUCIb88L/view?usp=drive_link");
                     else {
                         nullPdfCall();
-//                        webView.loadUrl(pdfNull);
                     }
                 }
                 // Sub -> Optimization Techniques
@@ -499,7 +416,6 @@ public class PdfViewerFragment extends Fragment {
                         webView.loadUrl("https://drive.google.com/file/d/1nY2sSX_BygCTPWimC4W4jtqbr5Cq0Cm2/view?usp=drive_link");
                     else {
                         nullPdfCall();
-//                        webView.loadUrl(pdfNull);
                     }
                 }
                 // Sub -> Network Security
@@ -514,7 +430,6 @@ public class PdfViewerFragment extends Fragment {
                         webView.loadUrl("https://drive.google.com/file/d/1yZ4bF0JUPhpd-Uag1iY_3rbLUvnVdyd1/view?usp=drive_link");
                     else {
                         nullPdfCall();
-//                        webView.loadUrl(pdfNull);
                     }
                 }
                 // Sub -> Visual Basic .NET
@@ -529,7 +444,6 @@ public class PdfViewerFragment extends Fragment {
                         webView.loadUrl("https://drive.google.com/file/d/1qUDQrerHMNTjo3PJ81XI8ThB9CrOqdKx/view?usp=drive_link");
                     else {
                         nullPdfCall();
-//                        webView.loadUrl(pdfNull);
                     }
                 }
                 // Sub -> Computer Graphics
@@ -545,7 +459,6 @@ public class PdfViewerFragment extends Fragment {
                         webView.loadUrl("https://drive.google.com/file/d/160P7_SeI_OD3pX8YVoqap6XCQVbMjGLK/view?usp=drive_link");
                     else {
                         nullPdfCall();
-//                        webView.loadUrl(pdfNull);
                     }
                 }
                 // Sub -> System Analysis & Design
@@ -560,7 +473,6 @@ public class PdfViewerFragment extends Fragment {
                         webView.loadUrl("https://drive.google.com/file/d/1Ly9ck2rGiR1NThJYqgxZXP_-NCBFUZFy/view?usp=drive_link");
                     else {
                         nullPdfCall();
-//                        webView.loadUrl(pdfNull);
                     }
                 }
                 // Sub -> Design & Analysis of Algorithms
@@ -574,25 +486,19 @@ public class PdfViewerFragment extends Fragment {
                     else if("exam papers".equalsIgnoreCase(mainButtonName))
                         webView.loadUrl("https://drive.google.com/file/d/1l6iW2a5BmqZtZ7EEf69k_WWegLwdcz9h/view?usp=drive_link");
                     else {
-//                        webView.loadUrl(pdfNull);
                         nullPdfCall();
                     }
                 }
                 else if(("syllabus".equalsIgnoreCase(mainButtonName)) || ("Syllabus".equalsIgnoreCase(msg)) ) {
                     webView.loadUrl("https://drive.google.com/file/d/1NkhWanzQT9ldio7nb5KlY_aN3LQIBfzd/view?usp=drive_link");
-//                        Toast.makeText(getContext(), "Work Properly!!!!!!!", Toast.LENGTH_SHORT).show();
                 }
-
-
 
                 else  {
                     Toast.makeText(getContext(), "Error! in Load Pdf", Toast.LENGTH_SHORT).show();
                     Toast.makeText(getContext(), "No choice found when loading pdf from google drive",
                             Toast.LENGTH_SHORT).show();
-
                     webView.loadUrl(noChoice);
                 }
-
             }
         });
 
@@ -606,8 +512,6 @@ public class PdfViewerFragment extends Fragment {
                     }
                 });
 
-
-
         return view;
     }
 
@@ -618,18 +522,6 @@ public class PdfViewerFragment extends Fragment {
         Toast.makeText(getContext(), "Error in loading the pdf",
                 Toast.LENGTH_SHORT).show();
     }
-
-
-
-
-/*   @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-
-        // ViewModel se list clear karo
-//        SharedViewModel viewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
-        inputDataViewModel.clearList();
-    }*/
 
     @Override
     public void onDestroyView() {
@@ -644,8 +536,5 @@ public class PdfViewerFragment extends Fragment {
             activity.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
     }
-
-
-
 
 }

@@ -17,9 +17,6 @@ public class SharedViewModel extends ViewModel {
     private final MutableLiveData<ArrayList<String>> arrayListLiveDataNew = new MutableLiveData<>();
     private final MutableLiveData<String> selectedData3 = new MutableLiveData<>();
 
-//    private final MutableLiveData<ArrayList<String>> arrayListLiveData2 = new MutableLiveData<>();
-
-
 
     public void setData3(String data3) {
         selectedData3.setValue(data3);
@@ -28,7 +25,6 @@ public class SharedViewModel extends ViewModel {
     public LiveData<String> getData3() {
         return selectedData3;
     }
-
 
 
     public void setData(String data) {
@@ -58,7 +54,6 @@ public class SharedViewModel extends ViewModel {
     }
 
 
-
     public void setDataNew(String data) {
         selectedDataNew.setValue(data);
     }
@@ -81,15 +76,7 @@ public class SharedViewModel extends ViewModel {
         return arrayListLiveDataNew;
     }
 
-
-
-
-
-
-
-
-    // chat gpt give me code
-
+    // this code is by chat gpt
 
     private final MutableLiveData<String> pdfUrl = new MutableLiveData<>();
     private final MutableLiveData<String> selectedSubjectName = new MutableLiveData<>();
@@ -109,11 +96,5 @@ public class SharedViewModel extends ViewModel {
     public LiveData<String> getSelectedSubject() {
         return selectedSubjectName;
     }
-
-
-
-
-
-
 
 }

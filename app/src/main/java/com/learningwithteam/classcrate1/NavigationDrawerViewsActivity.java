@@ -50,15 +50,12 @@ import java.util.HashMap;
 
 public class NavigationDrawerViewsActivity extends AppCompatActivity {
 
-
-
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityNavigationDrawerViewsBinding binding;
     private DrawerLayout drawer;
     private NavigationView navigationView;
 
     private FirebaseAnalytics mFirebaseAnalytics;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,17 +70,6 @@ public class NavigationDrawerViewsActivity extends AppCompatActivity {
         FirebaseHelper firebaseHelper = new FirebaseHelper(this);
         FirebaseUser user = firebaseHelper.getCurrentUser();
 
-/*
-
-        // ✅ Initialize Firebase Analytics
-        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
-
-        // ✅ Log a custom event (optional)
-        Bundle bundle = new Bundle();
-        bundle.putString(FirebaseAnalytics.Param.METHOD, "app_opened");
-        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.APP_OPEN, bundle);
-*/
-
         drawer = binding.drawerLayout;
         navigationView = binding.navView;
 
@@ -91,8 +77,6 @@ public class NavigationDrawerViewsActivity extends AppCompatActivity {
                 R.id.nav_home)
                 .setOpenableLayout(drawer)
                 .build();
-
-//                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_navigation_drawer_views);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
@@ -141,7 +125,6 @@ public class NavigationDrawerViewsActivity extends AppCompatActivity {
     @Override
     public void finish() {
         showExitDialog();
-//        super.finish();
         overridePendingTransition(R.anim.slide_in_top, R.anim.slide_out_bottom); // or reverse it if needed
     }
 
@@ -205,8 +188,6 @@ public class NavigationDrawerViewsActivity extends AppCompatActivity {
     }
 
     private boolean btnShare() {
-
-
         String folderLink = "https://drive.google.com/drive/folders/1V64WVO-vUBa2b6AaPPWcDxjJBmZhOId0?usp=drive_link";
 
         Intent intent = new Intent(Intent.ACTION_SEND);
@@ -218,94 +199,6 @@ public class NavigationDrawerViewsActivity extends AppCompatActivity {
         );
         startActivity(Intent.createChooser(intent, "Share Folder Link via"));
 
-
-
-//        String driveLink = "https://drive.google.com/file/d/1V64WVO-vUBa2b6AaPPWcDxjJBmZhOId0/view?usp=sharing"; // ClassCrate1
-
-//        String driveLink = "https://drive.google.com/file/d/1Yf0zV71MZ5HBc1auCQqq5iqhWjSApHoc/view?usp=sharing"; // ClassCrate1
-//        String driveLink = "https://drive.google.com/file/d/1589eZ39CMP6PZRJv3fBn7hICnbvvoVbn" +
-//                "/view?usp=sharing"; // ClassCrateApp link
-
-/*
-        Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.setType("text/plain");  // We're sharing text (the link)
-
-        intent.putExtra(Intent.EXTRA_SUBJECT, "Download ClassCrate App");
-//        intent.putExtra(Intent.EXTRA_TEXT, "Download our app using this link:\n" + driveLink);
-
-        intent.putExtra(Intent.EXTRA_TEXT,
-                "📲 *Download our app using this link (open in browser for best results)*:\n" +
-                        driveLink +
-                        "\n\n💡 *Tip:* If it doesn't open correctly, 👉 *long-press the link* and choose *'Open in browser'* 🌐."
-        );
-        startActivity(Intent.createChooser(intent, "Share App Link via"));
-*/
-
-
-//  1----------------First Method for sharing----------------
-//        Intent shareIntent = new Intent(Intent.ACTION_SEND);
-//        shareIntent.setType("text/plain");
-//        shareIntent.putExtra(Intent.EXTRA_TEXT, "Check out this app: https://play.google.com/store/apps/details?id=" + getPackageName());
-//        startActivity(Intent.createChooser(shareIntent, "Share via"));
-
-//  2----------------Second Method for sharing----------------
-/*
-        try {
-            ApplicationInfo app = getApplicationContext().getApplicationInfo();
-            String apkPath = app.sourceDir;
-            File apkFile = new File(apkPath);
-
-            Uri apkUri = FileProvider.getUriForFile(
-                    this,
-                    getPackageName() + ".provider",
-                    apkFile
-            );
-
-            Intent intent = new Intent(Intent.ACTION_SEND);
-            intent.setType("application/vnd.android.package-archive");
-            intent.putExtra(Intent.EXTRA_STREAM, apkUri);
-            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            startActivity(Intent.createChooser(intent, "Share App via"));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-*/
-//  3----------------Third Method for sharing----------------
-/*
-        try {
-            ApplicationInfo app = getApplicationContext().getApplicationInfo();
-            String apkPath = app.sourceDir;
-            File originalApk = new File(apkPath);
-
-            // Copy to cache dir with custom name
-            File newApk = new File(getExternalCacheDir(), "ClassCrate.apk");
-            try (java.io.InputStream in = new java.io.FileInputStream(originalApk);
-                 java.io.OutputStream out = new java.io.FileOutputStream(newApk)) {
-
-                byte[] buf = new byte[1024];
-                int len;
-                while ((len = in.read(buf)) > 0) {
-                    out.write(buf, 0, len);
-                }
-            }
-
-            Uri apkUri = FileProvider.getUriForFile(
-                    this,
-                    getPackageName() + ".provider",
-                    newApk
-            );
-
-            Intent intent = new Intent(Intent.ACTION_SEND);
-//            intent.setType("application/vnd.android.package-archive");
-            intent.setType("application/octet-stream");
-            intent.putExtra(Intent.EXTRA_STREAM, apkUri);
-
-            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            startActivity(Intent.createChooser(intent, "Share App via"));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    */
         return true;
     }
 

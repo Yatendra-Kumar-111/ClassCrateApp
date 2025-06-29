@@ -20,14 +20,10 @@ public class SemsterYtFragment extends Fragment {
         // Required empty public constructor
     }
 
-    //    private FragmentHomeBinding binding;
     private LinearLayout btnSem1, btnSem2, btnSem3, btnSem4, btnSem5, btnSem6;
-    //    private SharedViewModel outputViewModel;
     private SharedViewModel inputDataViewModel;
     private TextView title, tvSem1, tvSem2, tvSem3, tvSem4, tvSem5, tvSem6;
     private String msg;
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -37,9 +33,6 @@ public class SemsterYtFragment extends Fragment {
         // Block clicks passing through
         view.setOnTouchListener((v, event) -> true); // Consumes all touch events
 
-//        TextView textView = view.findViewById(R.id.title_semester_yt);
-
-//        Bundle bundle = new Bundle();
 
         btnSem1 = view.findViewById(R.id.btnSem1);
         btnSem2 = view.findViewById(R.id.btnSem2);
@@ -56,87 +49,37 @@ public class SemsterYtFragment extends Fragment {
 
 
         inputDataViewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
-//        inputDataViewModel.getData().observe(getViewLifecycleOwner(), data -> {
-//            title.setText(data + " -> SEMESTER");
-//                });
-
-
-//        inputDataViewModel.getData().observe(getViewLifecycleOwner(), msgFromHomeToSem -> {
-//            if (msgFromHomeToSem != null && !msgFromHomeToSem.isEmpty()) {
-//                msg = msgFromHomeToSem.toLowerCase();
-////                    Toast.makeText(getContext(), msg + "&&&&&&!", Toast.LENGTH_SHORT).show();
-//            } else {
-//                Toast.makeText(getContext(), "Error!!!", Toast.LENGTH_SHORT).show();
-//                title.setText("List is empty");
-//            }
-//        });
-
-
-
 
         btnSem1.setOnClickListener(v -> {
 
             String msgSendToMethod = tvSem1.getText().toString();
-//            Toast.makeText(getContext(), "Sem- chal raha hai", Toast.LENGTH_SHORT).show();
-//            inputDataViewModel.setData(msg);
             inputDataViewModel.setArrayList(subjectsForAllBtns(msgSendToMethod));
             openSubjectsFragment();
-
-//            requireActivity().getSupportFragmentManager().beginTransaction()
-//                    .replace(R.id.frameLayoutSemesterYT, new SubjectYtFragment())
-//                    .addToBackStack(null)
-//                    .commit();
-
         });
+
         btnSem2.setOnClickListener(v -> {
             String msgSendToMethod = tvSem2.getText().toString();
-
-//            inputDataViewModel.setData(msg);
             inputDataViewModel.setArrayList(subjectsForAllBtns(msgSendToMethod));
             openSubjectsFragment();
-
-//            requireActivity().getSupportFragmentManager().beginTransaction()
-//                    .replace(R.id.frameLayoutSemesterYT, new SubjectYtFragment())
-//                    .addToBackStack(null)
-//                    .commit();
         });
+
         btnSem3.setOnClickListener(v -> {
             String msgSendToMethod = tvSem3.getText().toString();
-
-//            inputDataViewModel.setData(msg);
             inputDataViewModel.setArrayList(subjectsForAllBtns(msgSendToMethod));
             openSubjectsFragment();
-
-//            requireActivity().getSupportFragmentManager().beginTransaction()
-//                    .replace(R.id.frameLayoutSemesterYT, new SubjectYtFragment())
-//                    .addToBackStack(null)
-//                    .commit();
         });
+
         btnSem4.setOnClickListener(v -> {
             String msgSendToMethod = tvSem4.getText().toString();
-
-//            inputDataViewModel.setData(msg);
             inputDataViewModel.setArrayList(subjectsForAllBtns(msgSendToMethod));
             openSubjectsFragment();
-
-//            requireActivity().getSupportFragmentManager().beginTransaction()
-//                    .replace(R.id.frameLayoutSemesterYT, new SubjectYtFragment())
-//                    .addToBackStack(null)
-//                    .commit();
         });
+
         btnSem5.setOnClickListener(v -> {
             String msgSendToMethod = tvSem5.getText().toString();
-
-//            inputDataViewModel.setData(msg);
             inputDataViewModel.setArrayList(subjectsForAllBtns(msgSendToMethod));
             openSubjectsFragment();
-//            requireActivity().getSupportFragmentManager().beginTransaction()
-//                    .replace(R.id.frameLayoutSemesterYT, new SubjectYtFragment())
-//                    .addToBackStack(null)
-//                    .commit();
         });
-
-
 
         return view;
     }
@@ -211,7 +154,6 @@ public class SemsterYtFragment extends Fragment {
 
         }
 
-
         else {
             Toast.makeText(getContext(), "Error!!!!! in SemesterFragment => " +semName+ "-> " +
                             "Subjects",
@@ -221,14 +163,9 @@ public class SemsterYtFragment extends Fragment {
     }
 
 
-
-
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-
-        // ViewModel se list clear karo
-//        SharedViewModel viewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
         inputDataViewModel.clearList();
     }
 }

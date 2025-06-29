@@ -88,14 +88,8 @@ public class AboutUsLayout extends AppCompatActivity {
     }
 
     private void openGmail(String emailAddress) {
-//        Intent intent = new Intent(Intent.ACTION_SENDTO);
-//        intent.setData(Uri.parse("mailto:your_email@gmail.com"));  // replace with your email
-//        startActivity(intent);
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:" + emailAddress));
-        // optionally add subject or body
-        // intent.putExtra(Intent.EXTRA_SUBJECT, "Hello");
-        // intent.putExtra(Intent.EXTRA_TEXT, "Body text here");
         startActivity(intent);
     }
 

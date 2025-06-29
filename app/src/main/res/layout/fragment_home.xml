@@ -56,7 +56,7 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:contentDescription="@string/app_name"
-                    android:src="@drawable/icon_book_shell" />
+                    android:src="@drawable/icon_model" />
                 <TextView
                     android:id="@+id/tvBook"
                     android:layout_width="wrap_content"
@@ -135,7 +135,7 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:contentDescription="@string/app_name"
-                    android:src="@drawable/icon_model" />
+                    android:src="@drawable/icon_book_shell" />
                 <TextView
                     android:id="@+id/tvModel"
                     android:layout_width="wrap_content"
@@ -157,11 +157,14 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="10dp">
+
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:contentDescription="@string/app_name"
-                    android:src="@drawable/icon_test" />
+                    android:background="@drawable/bg2"
+                    android:padding="10dp"
+                    android:src="@drawable/icon_exam" />
                 <TextView
                     android:id="@+id/tvPaper"
                     android:layout_width="wrap_content"

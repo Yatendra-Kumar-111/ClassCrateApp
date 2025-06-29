@@ -46,31 +46,6 @@ public class SubjectYtFragment extends Fragment {
         TextView sub5 = view.findViewById(R.id.title_subject_name5);
 
         inputDataViewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
-/*
-        inputDataViewModel.getData().observe(getViewLifecycleOwner(), data -> {
-            if (data != null && !data.isEmpty()) {
-                if(data.equalsIgnoreCase("book")) {
-                    msg = data;
-                } else if(data.equalsIgnoreCase("notes")) {
-                    msg = data;
-                } else if(data.equalsIgnoreCase("syllabus")) {
-                    msg = data;
-                } else if(data.equalsIgnoreCase("models")) {
-                    msg = data;
-                } else if(data.equalsIgnoreCase("exam papers")) {
-                    msg = data;
-                }
-
-                else if(data.equalsIgnoreCase("videos")) {
-                    msg = data;
-                }
-            } else {
-                textView.setText("List is empty");
-            }
-        });
-    */
-
-
 
         inputDataViewModel.getArrayList().observe(getViewLifecycleOwner(), list -> {
             if (list != null && !list.isEmpty()) {
@@ -85,83 +60,51 @@ public class SubjectYtFragment extends Fragment {
         });
 
 
-
         btnSub1.setOnClickListener(v -> {
 
             subName = sub1.getText().toString();
             msg = sub1.getText().toString();
             inputDataViewModel.setData(subName);
             inputDataViewModel.setData3(msg);
-//            Toast.makeText(getContext(), "*****" + subName, Toast.LENGTH_SHORT).show();
-
 
             openYoutubeFragment();
-
-//            requireActivity().getSupportFragmentManager().beginTransaction()
-//                    .replace(R.id.frameLayoutSubjectYT, new YoutubeLinkFragment())
-//                    .addToBackStack(null)
-//                    .commit();
         });
+
         btnSub2.setOnClickListener(v -> {
             subName = sub2.getText().toString();
             msg = sub2.getText().toString();
             inputDataViewModel.setData(subName);
             inputDataViewModel.setData3(msg);
-//            Toast.makeText(getContext(), "*****" + subName, Toast.LENGTH_SHORT).show();
 
             openYoutubeFragment();
-
-//            requireActivity().getSupportFragmentManager().beginTransaction()
-//                    .replace(R.id.frameLayoutSubjectYT, new YoutubeLinkFragment())
-//                    .addToBackStack(null)
-//                    .commit();
         });
+
         btnSub3.setOnClickListener(v -> {
             subName = sub3.getText().toString();
             msg = sub3.getText().toString();
             inputDataViewModel.setData(subName);
             inputDataViewModel.setData3(msg);
 
-//            Toast.makeText(getContext(), "*****" + subName, Toast.LENGTH_SHORT).show();
-
             openYoutubeFragment();
-
-//            requireActivity().getSupportFragmentManager().beginTransaction()
-//                    .replace(R.id.frameLayoutSubjectYT, new YoutubeLinkFragment())
-//                    .addToBackStack(null)
-//                    .commit();
         });
+
         btnSub4.setOnClickListener(v -> {
             subName = sub4.getText().toString();
             msg = sub4.getText().toString();
             inputDataViewModel.setData(subName);
             inputDataViewModel.setData3(msg);
 
-//            Toast.makeText(getContext(), "*****" + subName, Toast.LENGTH_SHORT).show();
-
-
             openYoutubeFragment();
-
-//            requireActivity().getSupportFragmentManager().beginTransaction()
-//                    .replace(R.id.frameLayoutSubjectYT, new YoutubeLinkFragment())
-//                    .addToBackStack(null)
-//                    .commit();
         });
+
         btnSub5.setOnClickListener(v -> {
             subName = sub5.getText().toString();
             msg = sub5.getText().toString();
             inputDataViewModel.setData(subName);
             inputDataViewModel.setData3(msg);
 
-//            Toast.makeText(getContext(), "*****" + subName, Toast.LENGTH_SHORT).show();
-
             openYoutubeFragment();
-//            requireActivity().getSupportFragmentManager().beginTransaction()
-//                    .replace(R.id.frameLayoutSubjectYT, new YoutubeLinkFragment())
-//                    .addToBackStack(null)
-//                    .commit();
         });
-
 
         return view;
     }
@@ -179,15 +122,5 @@ public class SubjectYtFragment extends Fragment {
                 .addToBackStack(null)
                 .commit();
     }
-
-/*    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-
-        // ViewModel se list clear karo
-//        SharedViewModel viewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
-        inputDataViewModel.clearList();
-    }
-    */
 
 }
